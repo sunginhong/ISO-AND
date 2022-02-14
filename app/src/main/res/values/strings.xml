@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SideProject_06</string>
+    <string name="popup_anima">Popup Animation</string>
+    <string name="popup">Popup</string>
+    <string name="nudge">Nudge</string>
+    <string name="alarm">Alarm</string>
+    <string name="paly_in_mot">Paly in Motion</string>
+    <string name="paly_out_mo">Paly Out Motion</string>
+    <string name="in_motion">In Motion</string>
+    <string name="out_motion">Out Motion</string>
+</resources>
