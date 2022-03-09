@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/drawable/radiogroup_rect.xml" value="0.394" />
         <entry key="app/src/main/res/drawable/rect_borderline.xml" value="0.4435" />
         <entry key="app/src/main/res/drawable/rect_button_min.xml" value="0.311" />
+        <entry key="app/src/main/res/drawable/rect_button_min_gray.xml" value="0.2325" />
         <entry key="app/src/main/res/drawable/rect_button_playmotion.xml" value="0.3265" />
         <entry key="app/src/main/res/drawable/rect_button_radio.xml" value="0.4435" />
         <entry key="app/src/main/res/drawable/rect_container.xml" value="0.394" />
@@ -25,7 +26,7 @@
         <entry key="app/src/main/res/drawable/rectangle_2.xml" value="0.4435" />
         <entry key="app/src/main/res/drawable/select_radio_male.xml" value="0.3265" />
         <entry key="app/src/main/res/drawable/shadow_test.xml" value="0.3265" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3467874794069193" />
         <entry key="app/src/main/res/layout/person_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/radiogroup_sample.xml" value="0.20697463768115942" />
         <entry key="app/src/main/res/layout/radiogroup_sample_main.xml" value="0.20697463768115942" />

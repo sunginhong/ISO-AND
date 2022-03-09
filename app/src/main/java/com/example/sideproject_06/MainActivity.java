@@ -3,6 +3,7 @@ package com.example.sideproject_06;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
@@ -47,15 +48,6 @@ public class MainActivity extends AppCompatActivity {
     public static int shadowHeight = 0;
     public static ViewGroup.LayoutParams params_copy;
 
-    private TextView group1_li4_btncase0_textView;
-    private TextView group1_li4_btncase1_textView;
-    private TextView group1_li4_btncase2_textView;
-    private TextView group1_li4_btncase3_textView;
-    private TextView group2_li4_btncase0_textView;
-    private TextView group2_li4_btncase1_textView;
-    private TextView group2_li4_btncase2_textView;
-    private TextView group2_li4_btncase3_textView;
-
     public static List<String> array_string_btnTitle = new ArrayList<String>();
     public static String playMotionState = "";
     public static String[] array_string_easeType;
@@ -77,23 +69,77 @@ public class MainActivity extends AppCompatActivity {
     public static RelativeLayout rect_objectRL;
     public static SquareView rect_object;
 
-    public static int group1_li0_state = 300;
-    public static boolean group1_li1_state = false;
-    public static double group1_li2_state = 0.0;
-    public static double group1_li3_state = 0.0;
-    public static String group1_li4_state = "";
-    public static String group1_li5_state = "None";
+    public static TextView anim_title;
+
+    public static int defCaseState00_group1_li0_state_def = 300;
+    public static int defCaseState00_group1_li1_state_def = 0;
+    public static double defCaseState00_group1_li2_state_def = 0.0;
+    public static double defCaseState00_group1_li3_state_def = 0.0;
+    public static String defCaseState00_group1_li4_state_def = "";
+    public static String defCaseState00_group1_li5_state_def = "None";
+
+    public static int defCaseState01_group1_li0_state_def = 300;
+    public static int defCaseState01_group1_li1_state_def = 0;
+    public static double defCaseState01_group1_li2_state_def = 1;
+    public static double defCaseState01_group1_li3_state_def = 0.0;
+    public static String defCaseState01_group1_li4_state_def = "";
+    public static String defCaseState01_group1_li5_state_def = "None";
+
+    public static int defCaseState02_group1_li0_state_def = 300;
+    public static int defCaseState02_group1_li1_state_def = 0;
+    public static double defCaseState02_group1_li2_state_def = 1;
+    public static double defCaseState02_group1_li3_state_def = 0.0;
+    public static String defCaseState02_group1_li4_state_def = "";
+    public static String defCaseState02_group1_li5_state_def = "None";
+
+    public static int group1_li0_state = defCaseState00_group1_li0_state_def;
+    public static int group1_li1_state = defCaseState00_group1_li1_state_def;
+    public static double group1_li2_state = defCaseState00_group1_li2_state_def;
+    public static double group1_li3_state = defCaseState00_group1_li3_state_def;
+    public static String group1_li4_state = defCaseState00_group1_li4_state_def;
+    public static String group1_li5_state = defCaseState00_group1_li5_state_def;
+
+    public static int defCaseState00_group2_li0_state_def = 300;
+    public static int defCaseState00_group2_li1_state_def = 0;
+    public static double defCaseState00_group2_li2_state_def = 0.0;
+    public static double defCaseState00_group2_li3_state_def = 0.0;
+    public static String defCaseState00_group2_li4_state_def = "";
+    public static String defCaseState00_group2_li5_state_def = "None";
+
+    public static int defCaseState01_group2_li0_state_def = 300;
+    public static int defCaseState01_group2_li1_state_def = 0;
+    public static double defCaseState01_group2_li2_state_def = 1;
+    public static double defCaseState01_group2_li3_state_def = 0.0;
+    public static String defCaseState01_group2_li4_state_def = "";
+    public static String defCaseState01_group2_li5_state_def = "None";
+
+    public static int defCaseState02_group2_li0_state_def = 300;
+    public static int defCaseState02_group2_li1_state_def = 0;
+    public static double defCaseState02_group2_li2_state_def = 1;
+    public static double defCaseState02_group2_li3_state_def = 0.0;
+    public static String defCaseState02_group2_li4_state_def = "";
+    public static String defCaseState02_group2_li5_state_def = "None";
+
+    public static int group2_li0_state = defCaseState00_group2_li0_state_def;
+    public static int group2_li1_state = defCaseState00_group2_li1_state_def;
+    public static double group2_li2_state = defCaseState00_group2_li2_state_def;
+    public static double group2_li3_state = defCaseState00_group2_li3_state_def;
+    public static String group2_li4_state = defCaseState00_group2_li4_state_def;
+    public static String group2_li5_state = defCaseState00_group2_li5_state_def;
 
     public static LinearLayout group1_li0_btncase0;
     public static LinearLayout group1_li0_btncase1;
+    public static LinearLayout group1_li0_btncase2;
     public static LinearLayout group1_li1_btncase0;
+    public static LinearLayout group1_li1_btncase1;
     public static LinearLayout group1_li2_btncase0;
     public static LinearLayout group1_li2_btncase1;
     public static LinearLayout group1_li2_btncase2;
-//    public static LinearLayout group1_li2_btncase3;
+    public static LinearLayout group1_li2_btncase3;
     public static LinearLayout group1_li3_btncase0;
     public static LinearLayout group1_li3_btncase1;
     public static LinearLayout group1_li3_btncase2;
+    public static LinearLayout group1_li3_btncase3;
     public static LinearLayout group1_li4_btncase0;
     public static LinearLayout group1_li4_btncase1;
     public static LinearLayout group1_li4_btncase2;
@@ -103,22 +149,19 @@ public class MainActivity extends AppCompatActivity {
     public static LinearLayout group1_li5_btncase2;
     public static LinearLayout group1_li5_btncase3;
 
-    public static int group2_li0_state = 200;
-    public static boolean group2_li1_state = false;
-    public static double group2_li2_state = 0;
-    public static double group2_li3_state = 0;
-    public static String group2_li4_state = "";
-    public static String group2_li5_state = "None";
-
     public static LinearLayout group2_li0_btncase0;
     public static LinearLayout group2_li0_btncase1;
+    public static LinearLayout group2_li0_btncase2;
     public static LinearLayout group2_li1_btncase0;
+    public static LinearLayout group2_li1_btncase1;
     public static LinearLayout group2_li2_btncase0;
     public static LinearLayout group2_li2_btncase1;
     public static LinearLayout group2_li2_btncase2;
+    public static LinearLayout group2_li2_btncase3;
     public static LinearLayout group2_li3_btncase0;
     public static LinearLayout group2_li3_btncase1;
     public static LinearLayout group2_li3_btncase2;
+    public static LinearLayout group2_li3_btncase3;
     public static LinearLayout group2_li4_btncase0;
     public static LinearLayout group2_li4_btncase1;
     public static LinearLayout group2_li4_btncase2;
@@ -130,7 +173,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static SquareButton group1_li0_btncase0_radio;
     public static SquareButton group1_li0_btncase1_radio;
+    public static SquareButton group1_li0_btncase2_radio;
     public static SquareButton group1_li1_btncase0_radio;
+    public static SquareButton group1_li1_btncase1_radio;
     public static SquareButton group1_li2_btncase0_radio;
     public static SquareButton group1_li2_btncase1_radio;
     public static SquareButton group1_li2_btncase2_radio;
@@ -138,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
     public static SquareButton group1_li3_btncase0_radio;
     public static SquareButton group1_li3_btncase1_radio;
     public static SquareButton group1_li3_btncase2_radio;
+    public static SquareButton group1_li3_btncase3_radio;
     public static SquareButton group1_li4_btncase0_radio;
     public static SquareButton group1_li4_btncase1_radio;
     public static SquareButton group1_li4_btncase2_radio;
@@ -149,7 +195,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static TransitionDrawable group1_li0_btncase0_radio_trans;
     public static TransitionDrawable group1_li0_btncase1_radio_trans;
+    public static TransitionDrawable group1_li0_btncase2_radio_trans;
     public static TransitionDrawable group1_li1_btncase0_radio_trans;
+    public static TransitionDrawable group1_li1_btncase1_radio_trans;
     public static TransitionDrawable group1_li2_btncase0_radio_trans;
     public static TransitionDrawable group1_li2_btncase1_radio_trans;
     public static TransitionDrawable group1_li2_btncase2_radio_trans;
@@ -157,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
     public static TransitionDrawable group1_li3_btncase0_radio_trans;
     public static TransitionDrawable group1_li3_btncase1_radio_trans;
     public static TransitionDrawable group1_li3_btncase2_radio_trans;
+    public static TransitionDrawable group1_li3_btncase3_radio_trans;
     public static TransitionDrawable group1_li4_btncase0_radio_trans;
     public static TransitionDrawable group1_li4_btncase1_radio_trans;
     public static TransitionDrawable group1_li4_btncase2_radio_trans;
@@ -166,9 +215,55 @@ public class MainActivity extends AppCompatActivity {
     public static TransitionDrawable group1_li5_btncase2_radio_trans;
     public static TransitionDrawable group1_li5_btncase3_radio_trans;
 
+    public static TextView group1_li0_btncase0_text;
+    public static TextView group1_li0_btncase1_text;
+    public static TextView group1_li0_btncase2_text;
+    public static TextView group1_li1_btncase0_text;
+    public static TextView group1_li1_btncase1_text;
+    public static TextView group1_li2_btncase0_text;
+    public static TextView group1_li2_btncase1_text;
+    public static TextView group1_li2_btncase2_text;
+    public static TextView group1_li2_btncase3_text;
+    public static TextView group1_li3_btncase0_text;
+    public static TextView group1_li3_btncase1_text;
+    public static TextView group1_li3_btncase2_text;
+    public static TextView group1_li3_btncase3_text;
+    public static TextView group1_li4_btncase0_textView;
+    public static TextView group1_li4_btncase1_textView;
+    public static TextView group1_li4_btncase2_textView;
+    public static TextView group1_li4_btncase3_textView;
+    public static TextView group1_li5_btncase0_text;
+    public static TextView group1_li5_btncase1_text;
+    public static TextView group1_li5_btncase2_text;
+    public static TextView group1_li5_btncase3_text;
+
+    public static TextView group2_li0_btncase0_text;
+    public static TextView group2_li0_btncase1_text;
+    public static TextView group2_li0_btncase2_text;
+    public static TextView group2_li1_btncase0_text;
+    public static TextView group2_li1_btncase1_text;
+    public static TextView group2_li2_btncase0_text;
+    public static TextView group2_li2_btncase1_text;
+    public static TextView group2_li2_btncase2_text;
+    public static TextView group2_li2_btncase3_text;
+    public static TextView group2_li3_btncase0_text;
+    public static TextView group2_li3_btncase1_text;
+    public static TextView group2_li3_btncase2_text;
+    public static TextView group2_li3_btncase3_text;
+    public static TextView group2_li4_btncase0_textView;
+    public static TextView group2_li4_btncase1_textView;
+    public static TextView group2_li4_btncase2_textView;
+    public static TextView group2_li4_btncase3_textView;
+    public static TextView group2_li5_btncase0_text;
+    public static TextView group2_li5_btncase1_text;
+    public static TextView group2_li5_btncase2_text;
+    public static TextView group2_li5_btncase3_text;
+
     public static SquareButton group2_li0_btncase0_radio;
     public static SquareButton group2_li0_btncase1_radio;
+    public static SquareButton group2_li0_btncase2_radio;
     public static SquareButton group2_li1_btncase0_radio;
+    public static SquareButton group2_li1_btncase1_radio;
     public static SquareButton group2_li2_btncase0_radio;
     public static SquareButton group2_li2_btncase1_radio;
     public static SquareButton group2_li2_btncase2_radio;
@@ -176,6 +271,7 @@ public class MainActivity extends AppCompatActivity {
     public static SquareButton group2_li3_btncase0_radio;
     public static SquareButton group2_li3_btncase1_radio;
     public static SquareButton group2_li3_btncase2_radio;
+    public static SquareButton group2_li3_btncase3_radio;
     public static SquareButton group2_li4_btncase0_radio;
     public static SquareButton group2_li4_btncase1_radio;
     public static SquareButton group2_li4_btncase2_radio;
@@ -187,13 +283,17 @@ public class MainActivity extends AppCompatActivity {
 
     public static TransitionDrawable group2_li0_btncase0_radio_trans;
     public static TransitionDrawable group2_li0_btncase1_radio_trans;
+    public static TransitionDrawable group2_li0_btncase2_radio_trans;
     public static TransitionDrawable group2_li1_btncase0_radio_trans;
+    public static TransitionDrawable group2_li1_btncase1_radio_trans;
     public static TransitionDrawable group2_li2_btncase0_radio_trans;
     public static TransitionDrawable group2_li2_btncase1_radio_trans;
     public static TransitionDrawable group2_li2_btncase2_radio_trans;
+    public static TransitionDrawable group2_li2_btncase3_radio_trans;
     public static TransitionDrawable group2_li3_btncase0_radio_trans;
     public static TransitionDrawable group2_li3_btncase1_radio_trans;
     public static TransitionDrawable group2_li3_btncase2_radio_trans;
+    public static TransitionDrawable group2_li3_btncase3_radio_trans;
     public static TransitionDrawable group2_li4_btncase0_radio_trans;
     public static TransitionDrawable group2_li4_btncase1_radio_trans;
     public static TransitionDrawable group2_li4_btncase2_radio_trans;
@@ -236,6 +336,8 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout.LayoutParams plcontainer = (RelativeLayout.LayoutParams) container.getLayoutParams();
         container_top_margin = plcontainer.topMargin;
         container_top_marginTop = Utils_Calc.dpToPx((int) 16.75);
+
+        anim_title = (TextView) findViewById(R.id.anim_title);
 
         rect_objectFL = (FrameLayout)findViewById(R.id.rect_objectFL);
         rect_objectFL_Copy = (FrameLayout)findViewById(R.id.rect_objectFL_Copy);
@@ -283,15 +385,49 @@ public class MainActivity extends AppCompatActivity {
         button_preset_2.setOnClickListener(clickAdapterTop);
         button_playmotion.setOnClickListener(clickAdapterTop);
 
+        group1_li0_btncase0_text = findViewById(R.id.group1_li0_btncase0_text);
+        group1_li0_btncase1_text = findViewById(R.id.group1_li0_btncase1_text);
+        group1_li0_btncase2_text = findViewById(R.id.group1_li0_btncase2_text);
+        group1_li1_btncase0_text = findViewById(R.id.group1_li1_btncase0_text);
+        group1_li1_btncase1_text = findViewById(R.id.group1_li1_btncase1_text);
+        group1_li2_btncase0_text = findViewById(R.id.group1_li2_btncase0_text);
+        group1_li2_btncase1_text = findViewById(R.id.group1_li2_btncase1_text);
+        group1_li2_btncase2_text = findViewById(R.id.group1_li2_btncase2_text);
+        group1_li2_btncase3_text = findViewById(R.id.group1_li2_btncase3_text);
+        group1_li3_btncase0_text = findViewById(R.id.group1_li3_btncase0_text);
+        group1_li3_btncase1_text = findViewById(R.id.group1_li3_btncase1_text);
+        group1_li3_btncase2_text = findViewById(R.id.group1_li3_btncase2_text);
+        group1_li3_btncase3_text = findViewById(R.id.group1_li3_btncase3_text);
         group1_li4_btncase0_textView = findViewById(R.id.group1_li4_btncase0_textView);
         group1_li4_btncase1_textView = findViewById(R.id.group1_li4_btncase1_textView);
         group1_li4_btncase2_textView = findViewById(R.id.group1_li4_btncase2_textView);
         group1_li4_btncase3_textView = findViewById(R.id.group1_li4_btncase3_textView);
+        group1_li5_btncase0_text = findViewById(R.id.group1_li5_btncase0_text);
+        group1_li5_btncase1_text = findViewById(R.id.group1_li5_btncase1_text);
+        group1_li5_btncase2_text = findViewById(R.id.group1_li5_btncase2_text);
+        group1_li5_btncase3_text = findViewById(R.id.group1_li5_btncase3_text);
 
+        group2_li0_btncase0_text = findViewById(R.id.group2_li0_btncase0_text);
+        group2_li0_btncase1_text = findViewById(R.id.group2_li0_btncase1_text);
+        group2_li0_btncase2_text = findViewById(R.id.group2_li0_btncase2_text);
+        group2_li1_btncase0_text = findViewById(R.id.group2_li1_btncase0_text);
+        group2_li1_btncase1_text = findViewById(R.id.group2_li1_btncase1_text);
+        group2_li2_btncase0_text = findViewById(R.id.group2_li2_btncase0_text);
+        group2_li2_btncase1_text = findViewById(R.id.group2_li2_btncase1_text);
+        group2_li2_btncase2_text = findViewById(R.id.group2_li2_btncase2_text);
+        group2_li2_btncase3_text = findViewById(R.id.group2_li2_btncase3_text);
+        group2_li3_btncase0_text = findViewById(R.id.group2_li3_btncase0_text);
+        group2_li3_btncase1_text = findViewById(R.id.group2_li3_btncase1_text);
+        group2_li3_btncase2_text = findViewById(R.id.group2_li3_btncase2_text);
+        group2_li3_btncase3_text = findViewById(R.id.group2_li3_btncase3_text);
         group2_li4_btncase0_textView = findViewById(R.id.group2_li4_btncase0_textView);
         group2_li4_btncase1_textView = findViewById(R.id.group2_li4_btncase1_textView);
         group2_li4_btncase2_textView = findViewById(R.id.group2_li4_btncase2_textView);
         group2_li4_btncase3_textView = findViewById(R.id.group2_li4_btncase3_textView);
+        group2_li5_btncase0_text = findViewById(R.id.group2_li5_btncase0_text);
+        group2_li5_btncase1_text = findViewById(R.id.group2_li5_btncase1_text);
+        group2_li5_btncase2_text = findViewById(R.id.group2_li5_btncase2_text);
+        group2_li5_btncase3_text = findViewById(R.id.group2_li5_btncase3_text);
 
 
         array_string_easeType = getResources().getStringArray(R.array.string_easeType);
@@ -302,26 +438,19 @@ public class MainActivity extends AppCompatActivity {
         array_string_btnTitle.add(getString(R.string.paly_out_mo));
         button_playmotion.setText(array_string_btnTitle.get(0));
 
-        group1_li4_btncase0_textView.setText(array_string_easeType[0]);
-        group1_li4_btncase1_textView.setText(array_string_easeType[1]);
-        group1_li4_btncase2_textView.setText(array_string_easeType[2]);
-        group1_li4_btncase3_textView.setText(array_string_easeType[3]);
-
-        group2_li4_btncase0_textView.setText(array_string_easeType[0]);
-        group2_li4_btncase1_textView.setText(array_string_easeType[1]);
-        group2_li4_btncase2_textView.setText(array_string_easeType[2]);
-        group2_li4_btncase3_textView.setText(array_string_easeType[3]);
-
         group1_li0_btncase0 = findViewById(R.id.group1_li0_btncase0);
         group1_li0_btncase1 = findViewById(R.id.group1_li0_btncase1);
+        group1_li0_btncase2 = findViewById(R.id.group1_li0_btncase2);
         group1_li1_btncase0 = findViewById(R.id.group1_li1_btncase0);
+        group1_li1_btncase1 = findViewById(R.id.group1_li1_btncase1);
         group1_li2_btncase0 = findViewById(R.id.group1_li2_btncase0);
         group1_li2_btncase1 = findViewById(R.id.group1_li2_btncase1);
         group1_li2_btncase2 = findViewById(R.id.group1_li2_btncase2);
-//        group1_li2_btncase3 = findViewById(R.id.group1_li2_btncase3);
+        group1_li2_btncase3 = findViewById(R.id.group1_li2_btncase3);
         group1_li3_btncase0 = findViewById(R.id.group1_li3_btncase0);
         group1_li3_btncase1 = findViewById(R.id.group1_li3_btncase1);
         group1_li3_btncase2 = findViewById(R.id.group1_li3_btncase2);
+        group1_li3_btncase3 = findViewById(R.id.group1_li3_btncase3);
         group1_li4_btncase0 = findViewById(R.id.group1_li4_btncase0);
         group1_li4_btncase1 = findViewById(R.id.group1_li4_btncase1);
         group1_li4_btncase2 = findViewById(R.id.group1_li4_btncase2);
@@ -334,17 +463,20 @@ public class MainActivity extends AppCompatActivity {
         ClickAdapter_Group1_Li0 clickAdapter_Group1_Li0 = new ClickAdapter_Group1_Li0(this);
         group1_li0_btncase0.setOnClickListener(clickAdapter_Group1_Li0);
         group1_li0_btncase1.setOnClickListener(clickAdapter_Group1_Li0);
+        group1_li0_btncase2.setOnClickListener(clickAdapter_Group1_Li0);
         ClickAdapter_Group1_Li1 clickAdapter_Group1_Li1 = new ClickAdapter_Group1_Li1(this);
         group1_li1_btncase0.setOnClickListener(clickAdapter_Group1_Li1);
+        group1_li1_btncase1.setOnClickListener(clickAdapter_Group1_Li1);
         ClickAdapter_Group1_Li2 clickAdapter_Group1_Li2 = new ClickAdapter_Group1_Li2(this);
         group1_li2_btncase0.setOnClickListener(clickAdapter_Group1_Li2);
         group1_li2_btncase1.setOnClickListener(clickAdapter_Group1_Li2);
         group1_li2_btncase2.setOnClickListener(clickAdapter_Group1_Li2);
-//        group1_li2_btncase3.setOnClickListener(clickAdapter_Group1_Li2);
+        group1_li2_btncase3.setOnClickListener(clickAdapter_Group1_Li2);
         ClickAdapter_Group1_Li3 clickAdapter_Group1_Li3 = new ClickAdapter_Group1_Li3(this);
         group1_li3_btncase0.setOnClickListener(clickAdapter_Group1_Li3);
         group1_li3_btncase1.setOnClickListener(clickAdapter_Group1_Li3);
         group1_li3_btncase2.setOnClickListener(clickAdapter_Group1_Li3);
+        group1_li3_btncase3.setOnClickListener(clickAdapter_Group1_Li3);
         ClickAdapter_Group1_Li4 clickAdapter_Group1_Li4 = new ClickAdapter_Group1_Li4(this);
         group1_li4_btncase0.setOnClickListener(clickAdapter_Group1_Li4);
         group1_li4_btncase1.setOnClickListener(clickAdapter_Group1_Li4);
@@ -358,14 +490,18 @@ public class MainActivity extends AppCompatActivity {
 
         group2_li0_btncase0 = findViewById(R.id.group2_li0_btncase0);
         group2_li0_btncase1 = findViewById(R.id.group2_li0_btncase1);
+        group2_li0_btncase2 = findViewById(R.id.group2_li0_btncase2);
         group2_li1_btncase0 = findViewById(R.id.group2_li1_btncase0);
+        group2_li1_btncase1 = findViewById(R.id.group2_li1_btncase1);
         group2_li2_btncase0 = findViewById(R.id.group2_li2_btncase0);
         group2_li2_btncase1 = findViewById(R.id.group2_li2_btncase1);
         group2_li2_btncase2 = findViewById(R.id.group2_li2_btncase2);
+        group2_li2_btncase3 = findViewById(R.id.group2_li2_btncase3);
 
         group2_li3_btncase0 = findViewById(R.id.group2_li3_btncase0);
         group2_li3_btncase1 = findViewById(R.id.group2_li3_btncase1);
         group2_li3_btncase2 = findViewById(R.id.group2_li3_btncase2);
+        group2_li3_btncase3 = findViewById(R.id.group2_li3_btncase3);
 
         group2_li4_btncase0 = findViewById(R.id.group2_li4_btncase0);
         group2_li4_btncase1 = findViewById(R.id.group2_li4_btncase1);
@@ -379,16 +515,20 @@ public class MainActivity extends AppCompatActivity {
         ClickAdapter_Group2_Li0 clickAdapter_Group2_Li0 = new ClickAdapter_Group2_Li0(this);
         group2_li0_btncase0.setOnClickListener(clickAdapter_Group2_Li0);
         group2_li0_btncase1.setOnClickListener(clickAdapter_Group2_Li0);
+        group2_li0_btncase2.setOnClickListener(clickAdapter_Group2_Li0);
         ClickAdapter_Group2_Li1 clickAdapter_Group2_Li1 = new ClickAdapter_Group2_Li1(this);
         group2_li1_btncase0.setOnClickListener(clickAdapter_Group2_Li1);
+        group2_li1_btncase1.setOnClickListener(clickAdapter_Group2_Li1);
         ClickAdapter_Group2_Li2 clickAdapter_Group2_Li2 = new ClickAdapter_Group2_Li2(this);
         group2_li2_btncase0.setOnClickListener(clickAdapter_Group2_Li2);
         group2_li2_btncase1.setOnClickListener(clickAdapter_Group2_Li2);
         group2_li2_btncase2.setOnClickListener(clickAdapter_Group2_Li2);
+        group2_li2_btncase3.setOnClickListener(clickAdapter_Group2_Li2);
         ClickAdapter_Group2_Li3 clickAdapter_Group2_Li3 = new ClickAdapter_Group2_Li3(this);
         group2_li3_btncase0.setOnClickListener(clickAdapter_Group2_Li3);
         group2_li3_btncase1.setOnClickListener(clickAdapter_Group2_Li3);
         group2_li3_btncase2.setOnClickListener(clickAdapter_Group2_Li3);
+        group2_li3_btncase3.setOnClickListener(clickAdapter_Group2_Li3);
         ClickAdapter_Group2_Li4 clickAdapter_Group2_Li4 = new ClickAdapter_Group2_Li4(this);
         group2_li4_btncase0.setOnClickListener(clickAdapter_Group2_Li4);
         group2_li4_btncase1.setOnClickListener(clickAdapter_Group2_Li4);
@@ -417,31 +557,37 @@ public class MainActivity extends AppCompatActivity {
 
         group1_li0_btncase0_radio = findViewById(R.id.group1_li0_btncase0_radio);
         group1_li0_btncase1_radio = findViewById(R.id.group1_li0_btncase1_radio);
+        group1_li0_btncase2_radio = findViewById(R.id.group1_li0_btncase2_radio);
         group1_li0_btncase0_radio_trans = (TransitionDrawable) group1_li0_btncase0_radio.getBackground();
         group1_li0_btncase1_radio_trans = (TransitionDrawable) group1_li0_btncase1_radio.getBackground();
-        MainActivity.group1_li0_btncase0_radio_trans.startTransition(0);
+        group1_li0_btncase2_radio_trans = (TransitionDrawable) group1_li0_btncase2_radio.getBackground();
+//        MainActivity.group1_li0_btncase0_radio_trans.startTransition(0);
 
         group1_li1_btncase0_radio = findViewById(R.id.group1_li1_btncase0_radio);
+        group1_li1_btncase1_radio = findViewById(R.id.group1_li1_btncase1_radio);
         group1_li1_btncase0_radio_trans = (TransitionDrawable) group1_li1_btncase0_radio.getBackground();
-        MainActivity.group1_li1_btncase0_radio_trans.startTransition(0);
+        group1_li1_btncase1_radio_trans = (TransitionDrawable) group1_li1_btncase1_radio.getBackground();
+//        MainActivity.group1_li1_btncase0_radio_trans.startTransition(0);
 
         group1_li2_btncase0_radio = findViewById(R.id.group1_li2_btncase0_radio);
         group1_li2_btncase1_radio = findViewById(R.id.group1_li2_btncase1_radio);
         group1_li2_btncase2_radio = findViewById(R.id.group1_li2_btncase2_radio);
-//        group1_li2_btncase3_radio = findViewById(R.id.group1_li2_btncase3_radio);
+        group1_li2_btncase3_radio = findViewById(R.id.group1_li2_btncase3_radio);
         group1_li2_btncase0_radio_trans = (TransitionDrawable) group1_li2_btncase0_radio.getBackground();
         group1_li2_btncase1_radio_trans = (TransitionDrawable) group1_li2_btncase1_radio.getBackground();
         group1_li2_btncase2_radio_trans = (TransitionDrawable) group1_li2_btncase2_radio.getBackground();
-//        group1_li2_btncase3_radio_trans = (TransitionDrawable) group1_li2_btncase3_radio.getBackground();
-        MainActivity.group1_li2_btncase0_radio_trans.startTransition(0);
+        group1_li2_btncase3_radio_trans = (TransitionDrawable) group1_li2_btncase3_radio.getBackground();
+//        MainActivity.group1_li2_btncase0_radio_trans.startTransition(0);
 
         group1_li3_btncase0_radio = findViewById(R.id.group1_li3_btncase0_radio);
         group1_li3_btncase1_radio = findViewById(R.id.group1_li3_btncase1_radio);
         group1_li3_btncase2_radio = findViewById(R.id.group1_li3_btncase2_radio);
+        group1_li3_btncase3_radio = findViewById(R.id.group1_li3_btncase3_radio);
         group1_li3_btncase0_radio_trans = (TransitionDrawable) group1_li3_btncase0_radio.getBackground();
         group1_li3_btncase1_radio_trans = (TransitionDrawable) group1_li3_btncase1_radio.getBackground();
         group1_li3_btncase2_radio_trans = (TransitionDrawable) group1_li3_btncase2_radio.getBackground();
-        MainActivity.group1_li3_btncase0_radio_trans.startTransition(0);
+        group1_li3_btncase3_radio_trans = (TransitionDrawable) group1_li3_btncase3_radio.getBackground();
+//        MainActivity.group1_li3_btncase0_radio_trans.startTransition(0);
 
         group1_li4_btncase0_radio = findViewById(R.id.group1_li4_btncase0_radio);
         group1_li4_btncase1_radio = findViewById(R.id.group1_li4_btncase1_radio);
@@ -451,7 +597,7 @@ public class MainActivity extends AppCompatActivity {
         group1_li4_btncase1_radio_trans = (TransitionDrawable) group1_li4_btncase1_radio.getBackground();
         group1_li4_btncase2_radio_trans = (TransitionDrawable) group1_li4_btncase2_radio.getBackground();
         group1_li4_btncase3_radio_trans = (TransitionDrawable) group1_li4_btncase3_radio.getBackground();
-        MainActivity.group1_li4_btncase0_radio_trans.startTransition(0);
+//        MainActivity.group1_li4_btncase0_radio_trans.startTransition(0);
 
         group1_li5_btncase0_radio = findViewById(R.id.group1_li5_btncase0_radio);
         group1_li5_btncase1_radio = findViewById(R.id.group1_li5_btncase1_radio);
@@ -461,35 +607,43 @@ public class MainActivity extends AppCompatActivity {
         group1_li5_btncase1_radio_trans = (TransitionDrawable) group1_li5_btncase1_radio.getBackground();
         group1_li5_btncase2_radio_trans = (TransitionDrawable) group1_li5_btncase2_radio.getBackground();
         group1_li5_btncase3_radio_trans = (TransitionDrawable) group1_li5_btncase3_radio.getBackground();
-        MainActivity.group1_li5_btncase0_radio_trans.startTransition(0);
+//        MainActivity.group1_li5_btncase0_radio_trans.startTransition(0);
 
 //
         group2_li0_btncase0_radio = findViewById(R.id.group2_li0_btncase0_radio);
         group2_li0_btncase1_radio = findViewById(R.id.group2_li0_btncase1_radio);
+        group2_li0_btncase2_radio = findViewById(R.id.group2_li0_btncase2_radio);
         group2_li0_btncase0_radio_trans = (TransitionDrawable) group2_li0_btncase0_radio.getBackground();
         group2_li0_btncase1_radio_trans = (TransitionDrawable) group2_li0_btncase1_radio.getBackground();
-        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
+        group2_li0_btncase2_radio_trans = (TransitionDrawable) group2_li0_btncase2_radio.getBackground();
+//        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
 
         group2_li1_btncase0_radio = findViewById(R.id.group2_li1_btncase0_radio);
+        group2_li1_btncase1_radio = findViewById(R.id.group2_li1_btncase1_radio);
         group2_li1_btncase0_radio_trans = (TransitionDrawable) group2_li1_btncase0_radio.getBackground();
-        MainActivity.group2_li1_btncase0_radio_trans.startTransition(0);
+        group2_li1_btncase1_radio_trans = (TransitionDrawable) group2_li1_btncase1_radio.getBackground();
+//        MainActivity.group2_li1_btncase0_radio_trans.startTransition(0);
 
         group2_li2_btncase0_radio = findViewById(R.id.group2_li2_btncase0_radio);
         group2_li2_btncase1_radio = findViewById(R.id.group2_li2_btncase1_radio);
         group2_li2_btncase2_radio = findViewById(R.id.group2_li2_btncase2_radio);
+        group2_li2_btncase3_radio = findViewById(R.id.group2_li2_btncase3_radio);
 
         group2_li2_btncase0_radio_trans = (TransitionDrawable) group2_li2_btncase0_radio.getBackground();
         group2_li2_btncase1_radio_trans = (TransitionDrawable) group2_li2_btncase1_radio.getBackground();
         group2_li2_btncase2_radio_trans = (TransitionDrawable) group2_li2_btncase2_radio.getBackground();
-        MainActivity.group2_li2_btncase0_radio_trans.startTransition(0);
+        group2_li2_btncase3_radio_trans = (TransitionDrawable) group2_li2_btncase3_radio.getBackground();
+//        MainActivity.group2_li2_btncase0_radio_trans.startTransition(0);
 
         group2_li3_btncase0_radio = findViewById(R.id.group2_li3_btncase0_radio);
         group2_li3_btncase1_radio = findViewById(R.id.group2_li3_btncase1_radio);
         group2_li3_btncase2_radio = findViewById(R.id.group2_li3_btncase2_radio);
+        group2_li3_btncase3_radio = findViewById(R.id.group2_li3_btncase3_radio);
         group2_li3_btncase0_radio_trans = (TransitionDrawable) group2_li3_btncase0_radio.getBackground();
         group2_li3_btncase1_radio_trans = (TransitionDrawable) group2_li3_btncase1_radio.getBackground();
         group2_li3_btncase2_radio_trans = (TransitionDrawable) group2_li3_btncase2_radio.getBackground();
-        MainActivity.group2_li3_btncase0_radio_trans.startTransition(0);
+        group2_li3_btncase3_radio_trans = (TransitionDrawable) group2_li3_btncase3_radio.getBackground();
+//        MainActivity.group2_li3_btncase0_radio_trans.startTransition(0);
 
         group2_li4_btncase0_radio = findViewById(R.id.group2_li4_btncase0_radio);
         group2_li4_btncase1_radio = findViewById(R.id.group2_li4_btncase1_radio);
@@ -499,7 +653,7 @@ public class MainActivity extends AppCompatActivity {
         group2_li4_btncase1_radio_trans = (TransitionDrawable) group2_li4_btncase1_radio.getBackground();
         group2_li4_btncase2_radio_trans = (TransitionDrawable) group2_li4_btncase2_radio.getBackground();
         group2_li4_btncase3_radio_trans = (TransitionDrawable) group2_li4_btncase3_radio.getBackground();
-        MainActivity.group2_li4_btncase0_radio_trans.startTransition(0);
+//        MainActivity.group2_li4_btncase0_radio_trans.startTransition(0);
 
         group2_li5_btncase0_radio = findViewById(R.id.group2_li5_btncase0_radio);
         group2_li5_btncase1_radio = findViewById(R.id.group2_li5_btncase1_radio);
@@ -509,7 +663,17 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase1_radio_trans = (TransitionDrawable) group2_li5_btncase1_radio.getBackground();
         group2_li5_btncase2_radio_trans = (TransitionDrawable) group2_li5_btncase2_radio.getBackground();
         group2_li5_btncase3_radio_trans = (TransitionDrawable) group2_li5_btncase3_radio.getBackground();
-        MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
+//        MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
+
+        group1_li4_btncase0_textView.setText(array_string_easeType[0]);
+        group1_li4_btncase1_textView.setText(array_string_easeType[1]);
+        group1_li4_btncase2_textView.setText(array_string_easeType[2]);
+        group1_li4_btncase3_textView.setText(array_string_easeType[3]);
+
+        group2_li4_btncase0_textView.setText(array_string_easeType[0]);
+        group2_li4_btncase1_textView.setText(array_string_easeType[1]);
+        group2_li4_btncase2_textView.setText(array_string_easeType[2]);
+        group2_li4_btncase3_textView.setText(array_string_easeType[3]);
 
 //        posMinY = screenHeight - (container_top_group_height+navigationBarHeight) + (transgroup_first_title_realSize_height - container_top_margin);
 //        posMinY = screenHeight - (container_top_group_height+navigationBarHeight) + (0 - container_top_margin - bottom_rectHeight+top_margin);
@@ -543,6 +707,7 @@ public class MainActivity extends AppCompatActivity {
                 posMinY_drag = root.getHeight()-(container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;;
                 params_copy.height = heightMax;
                 rect_objectFL_Copy.setLayoutParams(params_copy);
+                ResetState.defCaseState00();
             }
         }, 1);
 
@@ -583,4 +748,6 @@ public class MainActivity extends AppCompatActivity {
         //custom Log
 //        Log.(v.getResources().getResourceName(resId).split(":")[1] + " 의절대좌표::", r.left, r.top, r.right, r.bottom);
     }
+
+
 }

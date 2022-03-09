@@ -15,7 +15,7 @@ public class ClickAdapter_Top implements View.OnClickListener{
     boolean isClick0 = false;
     boolean isClick1 = false;
     boolean isClick2 = false;
-    boolean isClickPlaymotion = false;
+    public static boolean isClickPlaymotion = false;
     public static Vibrator vibrator;
 
     public ClickAdapter_Top(Context context){
@@ -31,6 +31,7 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 if (!isClick0){
                     isClick0 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(0);
+                    ResetState.defCaseState00();
                     buttonani(0);
                 }
                 break;
@@ -39,6 +40,8 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 if (!isClick1){
                     isClick1 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(1);
+                    ResetState.defCaseState01();
+                    AnimRectObject.function_CasePopup_containStateAnim_reset();
                     buttonani(1);
                 }
                 break;
@@ -47,6 +50,8 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 if (!isClick2){
                     isClick2 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(2);
+                    ResetState.defCaseState02();
+                    AnimRectObject.function_CasePopup_containStateAnim_reset();
                     buttonani(2);
                 }
                 break;

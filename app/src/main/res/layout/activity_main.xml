@@ -46,6 +46,8 @@
                  >
             </com.example.sideproject_06.SquareView>
 
+
+
         </RelativeLayout>
 
     </FrameLayout>
@@ -106,10 +108,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
+                            android:clipChildren="false"
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/popup_anima"
+                                android:id="@+id/anim_title"
                                 android:layout_width="144dp"
                                 android:layout_height="21dp"
                                 android:layout_alignParentLeft="true"
@@ -248,10 +251,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li0_btncase0_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
-                                                        android:text="0.3s"
+                                                        android:text="0.2s"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -274,6 +278,34 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li0_btncase1_text"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:text="0.3s"
+                                                        android:textAlignment="center"
+                                                        android:textAppearance="@style/set_category_subtitle" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/group1_li0_btncase2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:orientation="horizontal">
+
+                                                    <com.example.sideproject_06.SquareButton
+                                                        android:id="@+id/group1_li0_btncase2_radio"
+                                                        android:layout_width="0px"
+                                                        android:layout_height="10dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginRight="3dp"
+                                                        android:layout_weight="1"
+                                                        android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                    <TextView
+                                                        android:id="@+id/group1_li0_btncase2_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
@@ -323,10 +355,38 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li1_btncase0_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="wrap_content"
                                                         android:layout_gravity="center"
                                                         android:text="None"
+                                                        android:textAlignment="center"
+                                                        android:textAppearance="@style/set_category_subtitle" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/group1_li1_btncase1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:orientation="horizontal">
+
+                                                    <com.example.sideproject_06.SquareButton
+                                                        android:id="@+id/group1_li1_btncase1_radio"
+                                                        android:layout_width="0px"
+                                                        android:layout_height="10dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginRight="3dp"
+                                                        android:layout_weight="1"
+                                                        android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                    <TextView
+                                                        android:id="@+id/group1_li1_btncase1_text"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:text="Bottom"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -372,10 +432,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li2_btncase0_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="0%"
+                                                        android:text="0"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -398,10 +459,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li2_btncase1_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="80%"
+                                                        android:text="0.5"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -424,38 +486,42 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li2_btncase2_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="100%"
+                                                        android:text="0.7"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
                                                 </LinearLayout>
 
-                                                <!--                                            <LinearLayout-->
-                                                <!--                                                android:id="@+id/group1_li2_btncase3"-->
-                                                <!--                                                android:layout_width="wrap_content"-->
-                                                <!--                                                android:layout_height="wrap_content"-->
-                                                <!--                                                android:layout_marginLeft="10dp"-->
-                                                <!--                                                android:orientation="horizontal">-->
+                                                <LinearLayout
+                                                    android:id="@+id/group1_li2_btncase3"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:orientation="horizontal">
 
-                                                <!--                                                <com.example.sideproject_06.SquareButton-->
-                                                <!--                                                    android:id="@+id/group1_li2_btncase3_radio"-->
-                                                <!--                                                    android:layout_width="0px"-->
-                                                <!--                                                    android:layout_height="16sp"-->
-                                                <!--                                                    android:layout_marginTop="3dp"-->
-                                                <!--                                                    android:layout_marginRight="5dp"-->
-                                                <!--                                                    android:layout_weight="1"-->
-                                                <!--                                                    android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>-->
+                                                    <com.example.sideproject_06.SquareButton
+                                                        android:id="@+id/group1_li2_btncase3_radio"
+                                                        android:layout_width="0px"
+                                                        android:layout_height="10dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginRight="3dp"
+                                                        android:layout_weight="1"
+                                                        android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
-                                                <!--                                                <TextView-->
-                                                <!--                                                    android:layout_width="wrap_content"-->
-                                                <!--                                                    android:layout_height="match_parent"-->
-                                                <!--                                                    android:text="100%"-->
-                                                <!--                                                    android:textAppearance="@style/set_category_subtitle" />-->
+                                                    <TextView
+                                                        android:id="@+id/group1_li2_btncase3_text"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_gravity="center"
+                                                        android:text="1"
+                                                        android:textAlignment="center"
+                                                        android:textAppearance="@style/set_category_subtitle" />
 
-                                                <!--                                            </LinearLayout>-->
+                                                </LinearLayout>
 
                                             </LinearLayout>
 
@@ -497,10 +563,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li3_btncase0_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="0%"
+                                                        android:text="0"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -523,10 +590,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li3_btncase1_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="50%"
+                                                        android:text="0.5"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -549,10 +617,38 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li3_btncase2_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="100%"
+                                                        android:text="0.7"
+                                                        android:textAlignment="center"
+                                                        android:textAppearance="@style/set_category_subtitle" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/group1_li3_btncase3"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:orientation="horizontal">
+
+                                                    <com.example.sideproject_06.SquareButton
+                                                        android:id="@+id/group1_li3_btncase3_radio"
+                                                        android:layout_width="0px"
+                                                        android:layout_height="10dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_marginRight="3dp"
+                                                        android:layout_weight="1"
+                                                        android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                    <TextView
+                                                        android:id="@+id/group1_li3_btncase3_text"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_gravity="center"
+                                                        android:text="1"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -725,6 +821,7 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li5_btncase0_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
@@ -751,6 +848,7 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li5_btncase1_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
@@ -777,10 +875,11 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li5_btncase2_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
-                                                        android:text="Normal"
+                                                        android:text="Medium"
                                                         android:textAlignment="center"
                                                         android:textAppearance="@style/set_category_subtitle" />
 
@@ -790,7 +889,7 @@
                                                     android:id="@+id/group1_li5_btncase3"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="match_parent"
-                                                    android:layout_marginLeft="20dp"
+                                                    android:layout_marginLeft="10dp"
                                                     android:orientation="horizontal">
 
                                                     <com.example.sideproject_06.SquareButton
@@ -803,6 +902,7 @@
                                                         android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                     <TextView
+                                                        android:id="@+id/group1_li5_btncase3_text"
                                                         android:layout_width="wrap_content"
                                                         android:layout_height="match_parent"
                                                         android:layout_gravity="center"
@@ -922,10 +1022,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li0_btncase0_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="0.3s"
+                                                                android:text="0.2s"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -948,6 +1049,34 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li0_btncase1_text"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_gravity="center"
+                                                                android:text="0.3s"
+                                                                android:textAlignment="center"
+                                                                android:textAppearance="@style/set_category_subtitle" />
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/group2_li0_btncase2"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:orientation="horizontal">
+
+                                                            <com.example.sideproject_06.SquareButton
+                                                                android:id="@+id/group2_li0_btncase2_radio"
+                                                                android:layout_width="0px"
+                                                                android:layout_height="10dp"
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginRight="3dp"
+                                                                android:layout_weight="1"
+                                                                android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                            <TextView
+                                                                android:id="@+id/group2_li0_btncase2_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
@@ -997,10 +1126,38 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li1_btncase0_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
                                                                 android:text="None"
+                                                                android:textAlignment="center"
+                                                                android:textAppearance="@style/set_category_subtitle" />
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/group2_li1_btncase1"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:orientation="horizontal">
+
+                                                            <com.example.sideproject_06.SquareButton
+                                                                android:id="@+id/group2_li1_btncase1_radio"
+                                                                android:layout_width="0px"
+                                                                android:layout_height="10dp"
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginRight="3dp"
+                                                                android:layout_weight="1"
+                                                                android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                            <TextView
+                                                                android:id="@+id/group2_li1_btncase1_text"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:layout_gravity="center"
+                                                                android:text="Bottom"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1046,10 +1203,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li2_btncase0_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="0%"
+                                                                android:text="0"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1072,10 +1230,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li2_btncase1_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="80%"
+                                                                android:text="0.5"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1098,10 +1257,38 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li2_btncase2_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="100%"
+                                                                android:text="0.7"
+                                                                android:textAlignment="center"
+                                                                android:textAppearance="@style/set_category_subtitle" />
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/group2_li2_btncase3"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:orientation="horizontal">
+
+                                                            <com.example.sideproject_06.SquareButton
+                                                                android:id="@+id/group2_li2_btncase3_radio"
+                                                                android:layout_width="0px"
+                                                                android:layout_height="10dp"
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginRight="3dp"
+                                                                android:layout_weight="1"
+                                                                android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                            <TextView
+                                                                android:id="@+id/group2_li2_btncase3_text"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_gravity="center"
+                                                                android:text="1"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1147,10 +1334,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li3_btncase0_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="0%"
+                                                                android:text="0"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1173,10 +1361,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li3_btncase1_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="50%"
+                                                                android:text="0.5"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1199,10 +1388,38 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li3_btncase2_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="100%"
+                                                                android:text="0.7"
+                                                                android:textAlignment="center"
+                                                                android:textAppearance="@style/set_category_subtitle" />
+
+                                                        </LinearLayout>
+
+                                                        <LinearLayout
+                                                            android:id="@+id/group2_li3_btncase3"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="match_parent"
+                                                            android:layout_marginLeft="10dp"
+                                                            android:orientation="horizontal">
+
+                                                            <com.example.sideproject_06.SquareButton
+                                                                android:id="@+id/group2_li3_btncase3_radio"
+                                                                android:layout_width="0px"
+                                                                android:layout_height="10dp"
+                                                                android:layout_gravity="center"
+                                                                android:layout_marginRight="3dp"
+                                                                android:layout_weight="1"
+                                                                android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
+
+                                                            <TextView
+                                                                android:id="@+id/group2_li3_btncase3_text"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="match_parent"
+                                                                android:layout_gravity="center"
+                                                                android:text="1"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1372,6 +1589,7 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li5_btncase0_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
@@ -1398,6 +1616,7 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li5_btncase1_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
@@ -1424,10 +1643,11 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li5_btncase2_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
-                                                                android:text="Normal"
+                                                                android:text="Medium"
                                                                 android:textAlignment="center"
                                                                 android:textAppearance="@style/set_category_subtitle" />
 
@@ -1450,6 +1670,7 @@
                                                                 android:background="@drawable/rect_button_radio"></com.example.sideproject_06.SquareButton>
 
                                                             <TextView
+                                                                android:id="@+id/group2_li5_btncase3_text"
                                                                 android:layout_width="wrap_content"
                                                                 android:layout_height="match_parent"
                                                                 android:layout_gravity="center"
@@ -2004,10 +2225,70 @@
                             android:layout_height="match_parent"
                             android:layout_alignParentLeft="true"
                             android:layout_marginRight="10dp"
-                            android:background="@drawable/rect_button_min"
+                            android:background="@drawable/rect_button_min_gray"
                             android:stateListAnimator="@null"
-                            android:text="@string/alarm"
-                            android:textAppearance="@style/alarm" />
+                            android:text="@string/swipe"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/flicking"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/drag"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/tap"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/page_transition"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/object_transition"
+                            android:textAppearance="@style/noncase" />
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rect_button_min_gray"
+                            android:stateListAnimator="@null"
+                            android:text="@string/shape_transition"
+                            android:textAppearance="@style/noncase" />
 
                         <View
                             android:layout_width="20dp"

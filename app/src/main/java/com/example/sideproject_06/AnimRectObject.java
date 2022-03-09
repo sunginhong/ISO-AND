@@ -31,7 +31,7 @@ public class AnimRectObject {
     public static void function_CasePopup_containStateAnim(){
         if (MainActivity.playMotionState == "Out"){
             function_group1_vibrate();
-            function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
+            function_containAnim(item, Float.parseFloat(MainActivity.group1_li1_state+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -41,14 +41,18 @@ public class AnimRectObject {
         }
         if (MainActivity.playMotionState == "In"){
             function_group2_vibrate();
-            function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(MainActivity.group2_li2_state+"f"), Float.parseFloat(MainActivity.group2_li3_state+"f"), MainActivity.group2_li0_state, selEase_group2);
+            function_containAnim(item, Float.parseFloat(MainActivity.group2_li1_state+"f"), Float.parseFloat(MainActivity.group2_li2_state+"f"), Float.parseFloat(MainActivity.group2_li3_state+"f"), MainActivity.group2_li0_state, selEase_group2);
         }
+    }
+
+    public static void function_CasePopup_containStateAnim_reset(){
+        function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(1+"f"), Float.parseFloat(0+"f"), 0, selEase_group2);
     }
 
     public static void function_containAnim(View view, float posN, float scaleN, float alphaN, int duration, Interpolator interpolator){
         AnimatorSet containAnim = new AnimatorSet();
         containAnim.playTogether(
-                ObjectAnimator.ofFloat(view,"translationX",posN),
+                ObjectAnimator.ofFloat(view,"translationY",posN),
                 ObjectAnimator.ofFloat(view,"scaleX",scaleN),
                 ObjectAnimator.ofFloat(view,"scaleY",scaleN),
                 ObjectAnimator.ofFloat(view,"alpha",alphaN)
