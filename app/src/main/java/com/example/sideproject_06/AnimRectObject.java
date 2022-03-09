@@ -13,7 +13,7 @@ import androidx.core.view.animation.PathInterpolatorCompat;
 
 public class AnimRectObject {
     Context mContext;
-    public static View item;
+    public static View view_item0;
     public static Interpolator interpolator_easeInOut = PathInterpolatorCompat.create(0.65f, 0f, 0.35f, 1f);
     public static Interpolator interpolator_easeOut = PathInterpolatorCompat.create(0.33f, 1f, 0.68f, 1f);
     public static Interpolator interpolator_easeIn = PathInterpolatorCompat.create(0.32f, 0f, 0.67f, 0f);
@@ -21,32 +21,32 @@ public class AnimRectObject {
     public static Interpolator selEase_group1;
     public static Interpolator selEase_group2;
 
-    public AnimRectObject(View view){
-        item = view;
+    public AnimRectObject(View view0, View view1, View view2){
+        view_item0 = view0;
         selEase_group1 = interpolator_easeIn;
         selEase_group2 = interpolator_easeIn;
-        function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
+        function_containAnim(view_item0, Float.parseFloat(0+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
     }
 
     public static void function_CasePopup_containStateAnim(){
         if (MainActivity.playMotionState == "Out"){
             function_group1_vibrate();
-            function_containAnim(item, Float.parseFloat(MainActivity.group1_li1_state+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
+            function_containAnim(view_item0, Float.parseFloat(MainActivity.group1_li1_state+"f"), Float.parseFloat(MainActivity.group1_li2_state+"f"), Float.parseFloat(MainActivity.group1_li3_state+"f"), 0, selEase_group1);
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(1+"f"), Float.parseFloat(1+"f"), MainActivity.group1_li0_state, selEase_group1);
+                    function_containAnim(view_item0, Float.parseFloat(0+"f"), Float.parseFloat(1+"f"), Float.parseFloat(1+"f"), MainActivity.group1_li0_state, selEase_group1);
                 }
             }, 1);
         }
         if (MainActivity.playMotionState == "In"){
             function_group2_vibrate();
-            function_containAnim(item, Float.parseFloat(MainActivity.group2_li1_state+"f"), Float.parseFloat(MainActivity.group2_li2_state+"f"), Float.parseFloat(MainActivity.group2_li3_state+"f"), MainActivity.group2_li0_state, selEase_group2);
+            function_containAnim(view_item0, Float.parseFloat(MainActivity.group2_li1_state+"f"), Float.parseFloat(MainActivity.group2_li2_state+"f"), Float.parseFloat(MainActivity.group2_li3_state+"f"), MainActivity.group2_li0_state, selEase_group2);
         }
     }
 
     public static void function_CasePopup_containStateAnim_reset(){
-        function_containAnim(item, Float.parseFloat(0+"f"), Float.parseFloat(1+"f"), Float.parseFloat(0+"f"), 0, selEase_group2);
+        function_containAnim(view_item0, Float.parseFloat(0+"f"), Float.parseFloat(1+"f"), Float.parseFloat(0+"f"), 0, selEase_group2);
     }
 
     public static void function_containAnim(View view, float posN, float scaleN, float alphaN, int duration, Interpolator interpolator){

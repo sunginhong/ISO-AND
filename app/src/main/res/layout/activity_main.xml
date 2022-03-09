@@ -34,7 +34,7 @@
             >
 
             <com.example.sideproject_06.SquareView
-                android:id="@+id/rect_object"
+                android:id="@+id/anim_object_case0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
@@ -46,9 +46,27 @@
                  >
             </com.example.sideproject_06.SquareView>
 
+            <View
+                android:id="@+id/anim_object_case1"
+                android:layout_width="196dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="false"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/nudge" />
 
-
+            <View
+                android:id="@+id/anim_object_case2"
+                android:layout_width="242dp"
+                android:layout_height="63dp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="false"
+                android:layout_gravity="bottom|center"
+                android:background="@drawable/alarm" />
         </RelativeLayout>
+
 
     </FrameLayout>
 

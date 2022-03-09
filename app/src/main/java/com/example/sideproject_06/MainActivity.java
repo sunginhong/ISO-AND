@@ -3,7 +3,6 @@ package com.example.sideproject_06;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
@@ -11,10 +10,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -67,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
     public static FrameLayout rect_objectFL;
     public static FrameLayout rect_objectFL_Copy;
     public static RelativeLayout rect_objectRL;
-    public static SquareView rect_object;
+    public static SquareView anim_object_case0;
+    public static View anim_object_case1;
+    public static View anim_object_case2;
 
     public static TextView anim_title;
 
@@ -342,8 +341,10 @@ public class MainActivity extends AppCompatActivity {
         rect_objectFL = (FrameLayout)findViewById(R.id.rect_objectFL);
         rect_objectFL_Copy = (FrameLayout)findViewById(R.id.rect_objectFL_Copy);
         rect_objectRL = (RelativeLayout)findViewById(R.id.rect_objectRL);
-        rect_object = (SquareView)findViewById(R.id.rect_object);
-        AnimRectObject animRectObject = new AnimRectObject(rect_object);
+        anim_object_case0 = (SquareView)findViewById(R.id.anim_object_case0);
+        anim_object_case1 = (View)findViewById(R.id.anim_object_case1);
+        anim_object_case2 = (View)findViewById(R.id.anim_object_case2);
+        AnimRectObject animRectObject = new AnimRectObject(anim_object_case0, anim_object_case1, anim_object_case2);
 
         LinearLayout layout_container_top_group= findViewById(R.id.container_top_group);
         layout_container_top_group.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
