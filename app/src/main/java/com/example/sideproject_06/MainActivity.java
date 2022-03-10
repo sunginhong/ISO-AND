@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     public static FrameLayout rect_objectFL;
     public static FrameLayout rect_objectFL_Copy;
     public static RelativeLayout rect_objectRL;
-    public static SquareView anim_object_case0;
+    public static View anim_object_case0;
     public static View anim_object_case1;
     public static View anim_object_case2;
 
@@ -343,7 +343,7 @@ public class MainActivity extends AppCompatActivity {
         rect_objectFL = (FrameLayout)findViewById(R.id.rect_objectFL);
         rect_objectFL_Copy = (FrameLayout)findViewById(R.id.rect_objectFL_Copy);
         rect_objectRL = (RelativeLayout)findViewById(R.id.rect_objectRL);
-        anim_object_case0 = (SquareView)findViewById(R.id.anim_object_case0);
+        anim_object_case0 = (View)findViewById(R.id.anim_object_case0);
         anim_object_case1 = (View)findViewById(R.id.anim_object_case1);
         anim_object_case2 = (View)findViewById(R.id.anim_object_case2);
         AnimRectObject animRectObject = new AnimRectObject(anim_object_case0, anim_object_case1, anim_object_case2);

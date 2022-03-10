@@ -33,18 +33,15 @@
             android:background="#00BB86FC"
             >
 
-            <com.example.sideproject_06.SquareView
+            <View
                 android:id="@+id/anim_object_case0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="214dp"
+                android:layout_height="204dp"
                 android:layout_centerInParent="true"
+
+                android:layout_centerHorizontal="false"
                 android:layout_gravity="center"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="80dp"
-                android:background="@drawable/rectangle_box_10x"
-                 >
-            </com.example.sideproject_06.SquareView>
+                android:background="@drawable/popup"  />
 
             <View
                 android:id="@+id/anim_object_case1"
