@@ -32,6 +32,8 @@ public class ClickAdapter_Top implements View.OnClickListener{
                     isClick0 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(0);
                     ResetState.defCaseState00();
+                    AnimRectObject.function_CaseNudge_containStateAnim_reset();
+                    AnimRectObject.function_CaseAlarm_containStateAnim_reset();
                     buttonani(0);
                 }
                 break;
@@ -40,8 +42,9 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 if (!isClick1){
                     isClick1 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(1);
-                    ResetState.defCaseState01();
                     AnimRectObject.function_CasePopup_containStateAnim_reset();
+                    ResetState.defCaseState01();
+                    AnimRectObject.function_CaseAlarm_containStateAnim_reset();
                     buttonani(1);
                 }
                 break;
@@ -50,8 +53,9 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 if (!isClick2){
                     isClick2 = true;
                     MainActivity.animationType = MainActivity.array_animationType.get(2);
-                    ResetState.defCaseState02();
                     AnimRectObject.function_CasePopup_containStateAnim_reset();
+                    AnimRectObject.function_CaseAlarm_containStateAnim_reset();
+                    ResetState.defCaseState02();
                     buttonani(2);
                 }
                 break;
@@ -90,28 +94,51 @@ public class ClickAdapter_Top implements View.OnClickListener{
 
         if (MainActivity.animationType == MainActivity.array_animationType.get(1)) {
             if (!isClickPlaymotion) {
-
+                if (MainActivity.animationType == MainActivity.array_animationType.get(1)){
+                    AnimRectObject.function_CaseNudge_containStateAnim();
+                }
             } else {
-
+                if (MainActivity.animationType == MainActivity.array_animationType.get(1)){
+                    AnimRectObject.function_CaseNudge_containStateAnim();
+                }
             }
         }
 
         if (MainActivity.animationType == MainActivity.array_animationType.get(2)) {
             if (!isClickPlaymotion) {
-
+                if (MainActivity.animationType == MainActivity.array_animationType.get(2)){
+                    AnimRectObject.function_CaseAlarm_containStateAnim();
+                }
             } else {
-
-
+                if (MainActivity.animationType == MainActivity.array_animationType.get(2)){
+                    AnimRectObject.function_CaseAlarm_containStateAnim();
+                }
             }
         }
     }
 
     void buttonani(int id){
+        AnimRectObject.function_CasePopup_containStateAnim_reset();
+        AnimRectObject.function_CaseNudge_containStateAnim_reset();
+        AnimRectObject.function_CaseAlarm_containStateAnim_reset();
         switch (id){
             case 0:
                 isClick0 = true;
                 isClick1 = false;
                 isClick2 = false;
+
+                MainActivity.group1_li0_state = MainActivity.defCaseState00_group1_li0_state_def;
+                MainActivity.group1_li1_state = MainActivity.defCaseState00_group1_li1_state_def;
+                MainActivity.group1_li2_state = MainActivity.defCaseState00_group1_li2_state_def;
+                MainActivity.group1_li3_state = MainActivity.defCaseState00_group1_li3_state_def;
+                MainActivity.group1_li4_state = MainActivity.defCaseState00_group1_li4_state_def;
+                MainActivity.group1_li5_state = MainActivity.defCaseState00_group1_li5_state_def;
+                MainActivity.group2_li0_state = MainActivity.defCaseState00_group2_li0_state_def;
+                MainActivity.group2_li1_state = MainActivity.defCaseState00_group2_li1_state_def;
+                MainActivity.group2_li2_state = MainActivity.defCaseState00_group2_li2_state_def;
+                MainActivity.group2_li3_state = MainActivity.defCaseState00_group2_li3_state_def;
+                MainActivity.group2_li4_state = MainActivity.defCaseState00_group2_li4_state_def;
+                MainActivity.group2_li5_state = MainActivity.defCaseState00_group2_li5_state_def;
 
                 MainActivity.button_preset_trans_0.startTransition(100);
                 MainActivity.button_preset_0.setTextColor(mContext.getResources().getColorStateList(R.color.white));
@@ -125,6 +152,19 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 isClick1 = true;
                 isClick2 = false;
 
+                MainActivity.group1_li0_state = MainActivity.defCaseState01_group1_li0_state_def;
+                MainActivity.group1_li1_state = MainActivity.defCaseState01_group1_li1_state_def;
+                MainActivity.group1_li2_state = MainActivity.defCaseState01_group1_li2_state_def;
+                MainActivity.group1_li3_state = MainActivity.defCaseState01_group1_li3_state_def;
+                MainActivity.group1_li4_state = MainActivity.defCaseState01_group1_li4_state_def;
+                MainActivity.group1_li5_state = MainActivity.defCaseState01_group1_li5_state_def;
+                MainActivity.group2_li0_state = MainActivity.defCaseState01_group2_li0_state_def;
+                MainActivity.group2_li1_state = MainActivity.defCaseState01_group2_li1_state_def;
+                MainActivity.group2_li2_state = MainActivity.defCaseState01_group2_li2_state_def;
+                MainActivity.group2_li3_state = MainActivity.defCaseState01_group2_li3_state_def;
+                MainActivity.group2_li4_state = MainActivity.defCaseState01_group2_li4_state_def;
+                MainActivity.group2_li5_state = MainActivity.defCaseState01_group2_li5_state_def;
+
                 MainActivity.button_preset_trans_0.resetTransition();
                 MainActivity.button_preset_0.setTextColor(mContext.getResources().getColorStateList(R.color.black));
                 MainActivity.button_preset_trans_1.startTransition(100);
@@ -136,6 +176,19 @@ public class ClickAdapter_Top implements View.OnClickListener{
                 isClick0 = false;
                 isClick1 = false;
                 isClick2 = true;
+
+                MainActivity.group1_li0_state = MainActivity.defCaseState02_group1_li0_state_def;
+                MainActivity.group1_li1_state = MainActivity.defCaseState02_group1_li1_state_def;
+                MainActivity.group1_li2_state = MainActivity.defCaseState02_group1_li2_state_def;
+                MainActivity.group1_li3_state = MainActivity.defCaseState02_group1_li3_state_def;
+                MainActivity.group1_li4_state = MainActivity.defCaseState02_group1_li4_state_def;
+                MainActivity.group1_li5_state = MainActivity.defCaseState02_group1_li5_state_def;
+                MainActivity.group2_li0_state = MainActivity.defCaseState02_group2_li0_state_def;
+                MainActivity.group2_li1_state = MainActivity.defCaseState02_group2_li1_state_def;
+                MainActivity.group2_li2_state = MainActivity.defCaseState02_group2_li2_state_def;
+                MainActivity.group2_li3_state = MainActivity.defCaseState02_group2_li3_state_def;
+                MainActivity.group2_li4_state = MainActivity.defCaseState02_group2_li4_state_def;
+                MainActivity.group2_li5_state = MainActivity.defCaseState02_group2_li5_state_def;
 
                 MainActivity.button_preset_trans_0.resetTransition();
                 MainActivity.button_preset_0.setTextColor(mContext.getResources().getColorStateList(R.color.black));

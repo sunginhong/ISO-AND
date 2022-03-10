@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static TextView anim_title;
 
+    public static int bottomPosY = 30;
+
     public static int defCaseState00_group1_li0_state_def = 300;
     public static int defCaseState00_group1_li1_state_def = 0;
     public static double defCaseState00_group1_li2_state_def = 0.0;
@@ -78,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
     public static String defCaseState00_group1_li5_state_def = "None";
 
     public static int defCaseState01_group1_li0_state_def = 300;
-    public static int defCaseState01_group1_li1_state_def = 0;
+    public static int defCaseState01_group1_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
     public static double defCaseState01_group1_li2_state_def = 1;
     public static double defCaseState01_group1_li3_state_def = 0.0;
     public static String defCaseState01_group1_li4_state_def = "";
     public static String defCaseState01_group1_li5_state_def = "None";
 
     public static int defCaseState02_group1_li0_state_def = 300;
-    public static int defCaseState02_group1_li1_state_def = 0;
+    public static int defCaseState02_group1_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
     public static double defCaseState02_group1_li2_state_def = 1;
     public static double defCaseState02_group1_li3_state_def = 0.0;
     public static String defCaseState02_group1_li4_state_def = "";
@@ -106,14 +108,14 @@ public class MainActivity extends AppCompatActivity {
     public static String defCaseState00_group2_li5_state_def = "None";
 
     public static int defCaseState01_group2_li0_state_def = 300;
-    public static int defCaseState01_group2_li1_state_def = 0;
+    public static int defCaseState01_group2_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
     public static double defCaseState01_group2_li2_state_def = 1;
     public static double defCaseState01_group2_li3_state_def = 0.0;
     public static String defCaseState01_group2_li4_state_def = "";
     public static String defCaseState01_group2_li5_state_def = "None";
 
     public static int defCaseState02_group2_li0_state_def = 300;
-    public static int defCaseState02_group2_li1_state_def = 0;
+    public static int defCaseState02_group2_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
     public static double defCaseState02_group2_li2_state_def = 1;
     public static double defCaseState02_group2_li3_state_def = 0.0;
     public static String defCaseState02_group2_li4_state_def = "";
@@ -562,13 +564,11 @@ public class MainActivity extends AppCompatActivity {
         group1_li0_btncase0_radio_trans = (TransitionDrawable) group1_li0_btncase0_radio.getBackground();
         group1_li0_btncase1_radio_trans = (TransitionDrawable) group1_li0_btncase1_radio.getBackground();
         group1_li0_btncase2_radio_trans = (TransitionDrawable) group1_li0_btncase2_radio.getBackground();
-//        MainActivity.group1_li0_btncase0_radio_trans.startTransition(0);
 
         group1_li1_btncase0_radio = findViewById(R.id.group1_li1_btncase0_radio);
         group1_li1_btncase1_radio = findViewById(R.id.group1_li1_btncase1_radio);
         group1_li1_btncase0_radio_trans = (TransitionDrawable) group1_li1_btncase0_radio.getBackground();
         group1_li1_btncase1_radio_trans = (TransitionDrawable) group1_li1_btncase1_radio.getBackground();
-//        MainActivity.group1_li1_btncase0_radio_trans.startTransition(0);
 
         group1_li2_btncase0_radio = findViewById(R.id.group1_li2_btncase0_radio);
         group1_li2_btncase1_radio = findViewById(R.id.group1_li2_btncase1_radio);
@@ -578,7 +578,6 @@ public class MainActivity extends AppCompatActivity {
         group1_li2_btncase1_radio_trans = (TransitionDrawable) group1_li2_btncase1_radio.getBackground();
         group1_li2_btncase2_radio_trans = (TransitionDrawable) group1_li2_btncase2_radio.getBackground();
         group1_li2_btncase3_radio_trans = (TransitionDrawable) group1_li2_btncase3_radio.getBackground();
-//        MainActivity.group1_li2_btncase0_radio_trans.startTransition(0);
 
         group1_li3_btncase0_radio = findViewById(R.id.group1_li3_btncase0_radio);
         group1_li3_btncase1_radio = findViewById(R.id.group1_li3_btncase1_radio);
@@ -588,7 +587,6 @@ public class MainActivity extends AppCompatActivity {
         group1_li3_btncase1_radio_trans = (TransitionDrawable) group1_li3_btncase1_radio.getBackground();
         group1_li3_btncase2_radio_trans = (TransitionDrawable) group1_li3_btncase2_radio.getBackground();
         group1_li3_btncase3_radio_trans = (TransitionDrawable) group1_li3_btncase3_radio.getBackground();
-//        MainActivity.group1_li3_btncase0_radio_trans.startTransition(0);
 
         group1_li4_btncase0_radio = findViewById(R.id.group1_li4_btncase0_radio);
         group1_li4_btncase1_radio = findViewById(R.id.group1_li4_btncase1_radio);
@@ -598,7 +596,6 @@ public class MainActivity extends AppCompatActivity {
         group1_li4_btncase1_radio_trans = (TransitionDrawable) group1_li4_btncase1_radio.getBackground();
         group1_li4_btncase2_radio_trans = (TransitionDrawable) group1_li4_btncase2_radio.getBackground();
         group1_li4_btncase3_radio_trans = (TransitionDrawable) group1_li4_btncase3_radio.getBackground();
-//        MainActivity.group1_li4_btncase0_radio_trans.startTransition(0);
 
         group1_li5_btncase0_radio = findViewById(R.id.group1_li5_btncase0_radio);
         group1_li5_btncase1_radio = findViewById(R.id.group1_li5_btncase1_radio);
@@ -608,22 +605,18 @@ public class MainActivity extends AppCompatActivity {
         group1_li5_btncase1_radio_trans = (TransitionDrawable) group1_li5_btncase1_radio.getBackground();
         group1_li5_btncase2_radio_trans = (TransitionDrawable) group1_li5_btncase2_radio.getBackground();
         group1_li5_btncase3_radio_trans = (TransitionDrawable) group1_li5_btncase3_radio.getBackground();
-//        MainActivity.group1_li5_btncase0_radio_trans.startTransition(0);
 
-//
         group2_li0_btncase0_radio = findViewById(R.id.group2_li0_btncase0_radio);
         group2_li0_btncase1_radio = findViewById(R.id.group2_li0_btncase1_radio);
         group2_li0_btncase2_radio = findViewById(R.id.group2_li0_btncase2_radio);
         group2_li0_btncase0_radio_trans = (TransitionDrawable) group2_li0_btncase0_radio.getBackground();
         group2_li0_btncase1_radio_trans = (TransitionDrawable) group2_li0_btncase1_radio.getBackground();
         group2_li0_btncase2_radio_trans = (TransitionDrawable) group2_li0_btncase2_radio.getBackground();
-//        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
 
         group2_li1_btncase0_radio = findViewById(R.id.group2_li1_btncase0_radio);
         group2_li1_btncase1_radio = findViewById(R.id.group2_li1_btncase1_radio);
         group2_li1_btncase0_radio_trans = (TransitionDrawable) group2_li1_btncase0_radio.getBackground();
         group2_li1_btncase1_radio_trans = (TransitionDrawable) group2_li1_btncase1_radio.getBackground();
-//        MainActivity.group2_li1_btncase0_radio_trans.startTransition(0);
 
         group2_li2_btncase0_radio = findViewById(R.id.group2_li2_btncase0_radio);
         group2_li2_btncase1_radio = findViewById(R.id.group2_li2_btncase1_radio);
@@ -634,7 +627,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li2_btncase1_radio_trans = (TransitionDrawable) group2_li2_btncase1_radio.getBackground();
         group2_li2_btncase2_radio_trans = (TransitionDrawable) group2_li2_btncase2_radio.getBackground();
         group2_li2_btncase3_radio_trans = (TransitionDrawable) group2_li2_btncase3_radio.getBackground();
-//        MainActivity.group2_li2_btncase0_radio_trans.startTransition(0);
 
         group2_li3_btncase0_radio = findViewById(R.id.group2_li3_btncase0_radio);
         group2_li3_btncase1_radio = findViewById(R.id.group2_li3_btncase1_radio);
@@ -644,7 +636,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li3_btncase1_radio_trans = (TransitionDrawable) group2_li3_btncase1_radio.getBackground();
         group2_li3_btncase2_radio_trans = (TransitionDrawable) group2_li3_btncase2_radio.getBackground();
         group2_li3_btncase3_radio_trans = (TransitionDrawable) group2_li3_btncase3_radio.getBackground();
-//        MainActivity.group2_li3_btncase0_radio_trans.startTransition(0);
 
         group2_li4_btncase0_radio = findViewById(R.id.group2_li4_btncase0_radio);
         group2_li4_btncase1_radio = findViewById(R.id.group2_li4_btncase1_radio);
@@ -654,7 +645,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li4_btncase1_radio_trans = (TransitionDrawable) group2_li4_btncase1_radio.getBackground();
         group2_li4_btncase2_radio_trans = (TransitionDrawable) group2_li4_btncase2_radio.getBackground();
         group2_li4_btncase3_radio_trans = (TransitionDrawable) group2_li4_btncase3_radio.getBackground();
-//        MainActivity.group2_li4_btncase0_radio_trans.startTransition(0);
 
         group2_li5_btncase0_radio = findViewById(R.id.group2_li5_btncase0_radio);
         group2_li5_btncase1_radio = findViewById(R.id.group2_li5_btncase1_radio);
@@ -664,7 +654,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase1_radio_trans = (TransitionDrawable) group2_li5_btncase1_radio.getBackground();
         group2_li5_btncase2_radio_trans = (TransitionDrawable) group2_li5_btncase2_radio.getBackground();
         group2_li5_btncase3_radio_trans = (TransitionDrawable) group2_li5_btncase3_radio.getBackground();
-//        MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
 
         group1_li4_btncase0_textView.setText(array_string_easeType[0]);
         group1_li4_btncase1_textView.setText(array_string_easeType[1]);
@@ -676,20 +665,11 @@ public class MainActivity extends AppCompatActivity {
         group2_li4_btncase2_textView.setText(array_string_easeType[2]);
         group2_li4_btncase3_textView.setText(array_string_easeType[3]);
 
-//        posMinY = screenHeight - (container_top_group_height+navigationBarHeight) + (transgroup_first_title_realSize_height - container_top_margin);
-//        posMinY = screenHeight - (container_top_group_height+navigationBarHeight) + (0 - container_top_margin - bottom_rectHeight+top_margin);
-//        posMinY = container_top_margin - (bottom_rectHeight + Utils_Calc.dpToPx(47) + Utils_Calc.dpToPx((int) 14.5));
-//        posMinY = 100;
-
         posMinY = 0;
         posMaxY = 0;
         container.setY(posMinY);
-//        bottom_rect.setAlpha(0.5f);
 
         ViewGroup.LayoutParams params = rect_objectFL.getLayoutParams();
-//        params.width = 300;
-//        params.height = 200;
-//        rect_objectFL.setLayoutParams(params);
         params_copy = rect_objectFL_Copy.getLayoutParams();
 
         container_btn_updown = (View) findViewById(R.id.container_btn_updown);
@@ -703,12 +683,13 @@ public class MainActivity extends AppCompatActivity {
                 container.setY(posMinY);
                 MainActivity.rect_objectFL.setY(0);
                 heightMin = rect_objectFL.getHeight()+shadowHeight;
-//                heightMax = screenHeight-(posMinY+container_top_group_height+0-shadowHeight)+shadowHeight;
-                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-0;
-                posMinY_drag = root.getHeight()-(container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;;
+                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;
+//                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-0;
+                posMinY_drag = root.getHeight()-(container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;
                 params_copy.height = heightMax;
                 rect_objectFL_Copy.setLayoutParams(params_copy);
                 ResetState.defCaseState00();
+
             }
         }, 1);
 
@@ -745,7 +726,6 @@ public class MainActivity extends AppCompatActivity {
         Rect r = new Rect();
         v.getGlobalVisibleRect(r); //RootView 레이아웃을 기준으로한 좌표.
 
-        Log.d("dddddddd", "ssssdsdaddasda"+r.top);
         //custom Log
 //        Log.(v.getResources().getResourceName(resId).split(":")[1] + " 의절대좌표::", r.left, r.top, r.right, r.bottom);
     }

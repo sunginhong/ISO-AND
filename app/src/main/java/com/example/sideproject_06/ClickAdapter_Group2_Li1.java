@@ -24,7 +24,7 @@ public class ClickAdapter_Group2_Li1 implements View.OnClickListener{
                 break;
 
             case R.id.group2_li1_btncase1:
-                MainActivity.group2_li1_state = Utils_Calc.dpToPx(30);
+                MainActivity.group2_li1_state = Utils_Calc.dpToPx(MainActivity.bottomPosY);
                 MainActivity.group2_li1_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li1_btncase1_text.setTextColor(Color.parseColor("#000000"));
                 MainActivity.group2_li1_btncase0_radio_trans.resetTransition();

@@ -70,9 +70,7 @@ public class DragAdapter implements View.OnTouchListener{
             case MotionEvent.ACTION_UP:
                 if (move){
                     if (((MainActivity.heightMax-MainActivity.heightMin)/2) > moveY){
-//                        Log.d("sss"+MainActivity.rect_objectFL_Copy.getHeight() ,"ssd"+(int) rectCalcHeight);
                         if (MainActivity.rect_objectFL_Copy.getHeight() >= (int) rectCalcHeight){
-//                            Log.d("sss"+rectCalcHeight,"ssss"+MainActivity.container.getY());
                             function_containAnim(MainActivity.container, MainActivity.posMaxY, 400, interpolator_bounce);
                             if (rectCalcHeight >= MainActivity.posMinY){
                                 function_containAnim(MainActivity.rect_objectFL, 0, 400, interpolator_bounce);
@@ -82,8 +80,6 @@ public class DragAdapter implements View.OnTouchListener{
                             MainActivity.container_btn_updown.setRotation(-180);
                         }
                     } else {
-//                        if (MainActivity.rect_objectFL_Copy.getHeight() >= MainActivity.heightMin) {
-//                        if (MainActivity.rect_objectFL_Copy.getHeight() <= (int) rectCalcHeight) {
                         function_containAnim(MainActivity.container, MainActivity.posMinY, 400, interpolator_bounce);
                         if (MainActivity.container.getY() <= MainActivity.posMinY){
                             function_containAnim(MainActivity.rect_objectFL, 0, 400, interpolator_bounce);

@@ -151,6 +151,10 @@ public class ResetState {
     }
 
     public static void defCaseState(){
+        AnimRectObject.function_CasePopup_containStateAnim_reset();
+        AnimRectObject.function_CaseNudge_containStateAnim_reset();
+        AnimRectObject.function_CaseAlarm_containStateAnim_reset();
+
         ClickAdapter_Top.isClickPlaymotion = false;
         MainActivity.playMotionState = "In";
         MainActivity.button_playmotion.setText(MainActivity.array_string_btnTitle.get(0));
