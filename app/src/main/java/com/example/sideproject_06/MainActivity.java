@@ -3,6 +3,7 @@ package com.example.sideproject_06;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
     public static View anim_object_case0;
     public static View anim_object_case1;
     public static View anim_object_case2;
+
+    public View code_review1;
+    public View code_review2;
 
     public static TextView anim_title;
 
@@ -339,6 +343,9 @@ public class MainActivity extends AppCompatActivity {
         container_top_marginTop = Utils_Calc.dpToPx((int) 16.75);
 
         anim_title = (TextView) findViewById(R.id.anim_title);
+
+        code_review1 = (View) findViewById(R.id.code_review1);
+        code_review2 = (View) findViewById(R.id.code_review2);
 
         rect_objectFL = (FrameLayout)findViewById(R.id.rect_objectFL);
         rect_objectFL_Copy = (FrameLayout)findViewById(R.id.rect_objectFL_Copy);
@@ -708,7 +715,27 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.container_btn_updown.setRotation(0);
                 }
             }
-        }) ;
+        });
+
+        code_review1.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                str = et_test.getText().toString();// String 형태로 et_test 에 text 을 받아오겠다
+                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
+//                intent.putExtra("str", str);//str에있는 값을 가져 가겠다
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+            }
+        });
+
+        code_review2.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+            }
+        });
     }
 
     public static void stateCheck_group1(){

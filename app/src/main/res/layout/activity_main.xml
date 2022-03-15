@@ -134,8 +134,8 @@
                                 android:gravity="center_horizontal|top"
                                 android:text="@string/popup_anima"
                                 android:textAllCaps="false"
-                                android:textStyle="bold"
-                                android:textAppearance="@style/popup_anima" />
+                                android:textAppearance="@style/popup_anima"
+                                android:textStyle="bold" />
 
                             <View
                                 android:layout_width="0dp"
@@ -147,7 +147,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_gravity="right"
-                                android:background="@drawable/arrow_10x"/>
+                                android:background="@drawable/arrow_10x" />
 
                         </LinearLayout>
 
@@ -199,8 +199,8 @@
                                         <LinearLayout
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:orientation="horizontal"
-                                            android:layout_marginBottom="9.5dp">
+                                            android:layout_marginBottom="9.5dp"
+                                            android:orientation="horizontal">
 
                                             <TextView
                                                 android:id="@+id/transgroup_first_title"
@@ -208,7 +208,7 @@
                                                 android:layout_height="18dp"
                                                 android:text="@string/in_motion"
                                                 android:textAppearance="@style/in_motion"
-                                                android:textStyle="bold"/>
+                                                android:textStyle="bold" />
 
                                             <View
                                                 android:layout_width="0dp"
@@ -972,15 +972,15 @@
                                                 <LinearLayout
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:orientation="horizontal"
-                                                    android:layout_marginBottom="9.5dp">
+                                                    android:layout_marginBottom="9.5dp"
+                                                    android:orientation="horizontal">
 
                                                     <TextView
                                                         android:layout_width="80dp"
                                                         android:layout_height="18dp"
                                                         android:text="@string/out_motion"
                                                         android:textAppearance="@style/out_motion"
-                                                        android:textStyle="bold"/>
+                                                        android:textStyle="bold" />
 
                                                     <View
                                                         android:layout_width="0dp"
