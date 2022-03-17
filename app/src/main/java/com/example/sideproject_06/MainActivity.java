@@ -23,32 +23,17 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     public static int screenHeight;
     public static RelativeLayout container;
-    public static int navigationBarHeight = 0;
-    public static int posMinY = 0;
-    public static int posMinY_drag = 0;
-    public static int posMaxY = 0;
-    public static int heightMin = 0;
-    public static int heightMax = 0;
 
     public static LinearLayout container_top;
-    public static int container_top_margin = 0;
-    public static int container_top_marginTop = 0;
-    public static int container_top_group_height = 0;
-    public static int container_first_group_height = 0;
-    public static int transgroup_first_title_realSize_height = 0;
-    public static boolean container_bool = false;
     public static String animationType = "";
     public static List<String> array_animationType = new ArrayList<String>();
 
     public static Context ctx;
     public static RelativeLayout root;
-    public static int rootHeight = 0;
-    public static int shadowHeight = 0;
+
     public static ViewGroup.LayoutParams params_copy;
 
     public static List<String> array_string_btnTitle = new ArrayList<String>();
-    public static String playMotionState = "";
-    public static String[] array_string_easeType;
     public static Button button_preset_0;
     public static Button button_preset_1;
     public static Button button_preset_2;
@@ -59,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
     public static TransitionDrawable button_playmotion_trans;
 
     public static RelativeLayout bottom_rect;
-    public static int bottom_rectHeight = 0;
-    public static int bottom_top_margin;
 
     public static FrameLayout rect_objectFL;
     public static FrameLayout rect_objectFL_Copy;
@@ -71,66 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public View code_review1;
     public View code_review2;
-
     public static TextView anim_title;
-
-    public static int bottomPosY = 30;
-
-    public static int defCaseState00_group1_li0_state_def = 300;
-    public static int defCaseState00_group1_li1_state_def = 0;
-    public static double defCaseState00_group1_li2_state_def = 0.0;
-    public static double defCaseState00_group1_li3_state_def = 0.0;
-    public static String defCaseState00_group1_li4_state_def = "";
-    public static String defCaseState00_group1_li5_state_def = "None";
-
-    public static int defCaseState01_group1_li0_state_def = 300;
-    public static int defCaseState01_group1_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
-    public static double defCaseState01_group1_li2_state_def = 1;
-    public static double defCaseState01_group1_li3_state_def = 0.0;
-    public static String defCaseState01_group1_li4_state_def = "";
-    public static String defCaseState01_group1_li5_state_def = "None";
-
-    public static int defCaseState02_group1_li0_state_def = 300;
-    public static int defCaseState02_group1_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
-    public static double defCaseState02_group1_li2_state_def = 1;
-    public static double defCaseState02_group1_li3_state_def = 0.0;
-    public static String defCaseState02_group1_li4_state_def = "";
-    public static String defCaseState02_group1_li5_state_def = "None";
-
-    public static int group1_li0_state = defCaseState00_group1_li0_state_def;
-    public static int group1_li1_state = defCaseState00_group1_li1_state_def;
-    public static double group1_li2_state = defCaseState00_group1_li2_state_def;
-    public static double group1_li3_state = defCaseState00_group1_li3_state_def;
-    public static String group1_li4_state = defCaseState00_group1_li4_state_def;
-    public static String group1_li5_state = defCaseState00_group1_li5_state_def;
-
-    public static int defCaseState00_group2_li0_state_def = 300;
-    public static int defCaseState00_group2_li1_state_def = 0;
-    public static double defCaseState00_group2_li2_state_def = 0.0;
-    public static double defCaseState00_group2_li3_state_def = 0.0;
-    public static String defCaseState00_group2_li4_state_def = "";
-    public static String defCaseState00_group2_li5_state_def = "None";
-
-    public static int defCaseState01_group2_li0_state_def = 300;
-    public static int defCaseState01_group2_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
-    public static double defCaseState01_group2_li2_state_def = 1;
-    public static double defCaseState01_group2_li3_state_def = 0.0;
-    public static String defCaseState01_group2_li4_state_def = "";
-    public static String defCaseState01_group2_li5_state_def = "None";
-
-    public static int defCaseState02_group2_li0_state_def = 300;
-    public static int defCaseState02_group2_li1_state_def = Utils_Calc.dpToPx(MainActivity.bottomPosY);
-    public static double defCaseState02_group2_li2_state_def = 1;
-    public static double defCaseState02_group2_li3_state_def = 0.0;
-    public static String defCaseState02_group2_li4_state_def = "";
-    public static String defCaseState02_group2_li5_state_def = "None";
-
-    public static int group2_li0_state = defCaseState00_group2_li0_state_def;
-    public static int group2_li1_state = defCaseState00_group2_li1_state_def;
-    public static double group2_li2_state = defCaseState00_group2_li2_state_def;
-    public static double group2_li3_state = defCaseState00_group2_li3_state_def;
-    public static String group2_li4_state = defCaseState00_group2_li4_state_def;
-    public static String group2_li5_state = defCaseState00_group2_li5_state_def;
 
     public static LinearLayout group1_li0_btncase0;
     public static LinearLayout group1_li0_btncase1;
@@ -308,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
     public static TransitionDrawable group2_li5_btncase2_radio_trans;
     public static TransitionDrawable group2_li5_btncase3_radio_trans;
 
-
     public static TextView result_in_duration;
     public static TextView result_in_scale;
     public static TextView result_in_opacity;
@@ -328,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(arg0);
         new GetNavigationBarHeight(this);
         int resId = getResources().getIdentifier("navigation_bar_height", "dimen", "android");
-        if (resId > 0) { navigationBarHeight = getResources().getDimensionPixelSize(resId); }
+        if (resId > 0) { Vars.navigationBarHeight = getResources().getDimensionPixelSize(resId); }
 
         setContentView(R.layout.activity_main);
 
@@ -339,8 +262,8 @@ public class MainActivity extends AppCompatActivity {
         container = (RelativeLayout) findViewById(R.id.container);
         container.setOnTouchListener(dragAdapter);
         RelativeLayout.LayoutParams plcontainer = (RelativeLayout.LayoutParams) container.getLayoutParams();
-        container_top_margin = plcontainer.topMargin;
-        container_top_marginTop = Utils_Calc.dpToPx((int) 16.75);
+        Vars.container_top_margin = plcontainer.topMargin;
+        Vars.container_top_marginTop = Utils_Calc.dpToPx((int) 16.75);
 
         anim_title = (TextView) findViewById(R.id.anim_title);
 
@@ -357,21 +280,21 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout layout_container_top_group= findViewById(R.id.container_top_group);
         layout_container_top_group.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        container_top_group_height = layout_container_top_group.getMeasuredHeight();
+        Vars.container_top_group_height = layout_container_top_group.getMeasuredHeight();
 
         LinearLayout layout_transgroup_first_ll= findViewById(R.id.transgroup_first_ll);
         layout_transgroup_first_ll.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        container_first_group_height = layout_transgroup_first_ll.getMeasuredHeight();
+        Vars.container_first_group_height = layout_transgroup_first_ll.getMeasuredHeight();
 
         TextView transgroup_first_title = findViewById(R.id.transgroup_first_title);
         Rect transgroup_first_title_realSize = new Rect();
         transgroup_first_title.getPaint().getTextBounds(transgroup_first_title.getText().toString(), 0, transgroup_first_title.getText().length(), transgroup_first_title_realSize);
-        transgroup_first_title_realSize_height = transgroup_first_title_realSize.height();
+        Vars.transgroup_first_title_realSize_height = transgroup_first_title_realSize.height();
 
         bottom_rect = findViewById(R.id.bottom_rect);
-        bottom_rectHeight = Utils_Calc.dpToPx(94);
-        bottom_top_margin = Utils_Calc.dpToPx((int) 16.75);
-        shadowHeight = Utils_Calc.dpToPx(12);
+        Vars.bottom_rectHeight = Utils_Calc.dpToPx(94);
+        Vars.bottom_top_margin = Utils_Calc.dpToPx((int) 16.75);
+        Vars.shadowHeight = Utils_Calc.dpToPx(12);
 
         array_animationType.add("popup");
         array_animationType.add("nudge");
@@ -440,13 +363,12 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase3_text = findViewById(R.id.group2_li5_btncase3_text);
 
 
-        array_string_easeType = getResources().getStringArray(R.array.string_easeType);
-        group1_li4_state = array_string_easeType[0];
-        group2_li4_state = array_string_easeType[0];
+        Vars.array_string_easeType = getResources().getStringArray(R.array.string_easeType);
+        Vars.group1_li4_state = Vars.array_string_easeType[0];
+        Vars.group2_li4_state = Vars.array_string_easeType[0];
 
         array_string_btnTitle.add(getString(R.string.paly_in_mot));
         array_string_btnTitle.add(getString(R.string.paly_out_mo));
-        button_playmotion.setText(array_string_btnTitle.get(0));
 
         group1_li0_btncase0 = findViewById(R.id.group1_li0_btncase0);
         group1_li0_btncase1 = findViewById(R.id.group1_li0_btncase1);
@@ -549,9 +471,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase1.setOnClickListener(clickAdapter_Group2_Li5);
         group2_li5_btncase2.setOnClickListener(clickAdapter_Group2_Li5);
         group2_li5_btncase3.setOnClickListener(clickAdapter_Group2_Li5);
-
-        button_preset_trans_0.startTransition(0);
-        button_preset_0.setTextColor(getResources().getColorStateList(R.color.white));
 
         result_in_duration = findViewById(R.id.result_in_duration);
         result_in_scale = findViewById(R.id.result_in_scale);
@@ -662,56 +581,91 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase2_radio_trans = (TransitionDrawable) group2_li5_btncase2_radio.getBackground();
         group2_li5_btncase3_radio_trans = (TransitionDrawable) group2_li5_btncase3_radio.getBackground();
 
-        group1_li4_btncase0_textView.setText(array_string_easeType[0]);
-        group1_li4_btncase1_textView.setText(array_string_easeType[1]);
-        group1_li4_btncase2_textView.setText(array_string_easeType[2]);
-        group1_li4_btncase3_textView.setText(array_string_easeType[3]);
+        group1_li4_btncase0_textView.setText(Vars.array_string_easeType[0]);
+        group1_li4_btncase1_textView.setText(Vars.array_string_easeType[1]);
+        group1_li4_btncase2_textView.setText(Vars.array_string_easeType[2]);
+        group1_li4_btncase3_textView.setText(Vars.array_string_easeType[3]);
 
-        group2_li4_btncase0_textView.setText(array_string_easeType[0]);
-        group2_li4_btncase1_textView.setText(array_string_easeType[1]);
-        group2_li4_btncase2_textView.setText(array_string_easeType[2]);
-        group2_li4_btncase3_textView.setText(array_string_easeType[3]);
+        group2_li4_btncase0_textView.setText(Vars.array_string_easeType[0]);
+        group2_li4_btncase1_textView.setText(Vars.array_string_easeType[1]);
+        group2_li4_btncase2_textView.setText(Vars.array_string_easeType[2]);
+        group2_li4_btncase3_textView.setText(Vars.array_string_easeType[3]);
 
-        posMinY = 0;
-        posMaxY = 0;
-        container.setY(posMinY);
+        Vars.posMinY = 0;
+        Vars.posMaxY = 0;
+        container.setY(Vars.posMinY);
 
         ViewGroup.LayoutParams params = rect_objectFL.getLayoutParams();
         params_copy = rect_objectFL_Copy.getLayoutParams();
 
         container_btn_updown = (View) findViewById(R.id.container_btn_updown);
 
+        if (Vars.playMotionState == "In"){
+            button_playmotion.setText(array_string_btnTitle.get(0));
+            button_playmotion_trans.resetTransition();
+            button_playmotion.setTextColor(getColorStateList(R.color.white));
+        }
+        if (Vars.playMotionState == "Out"){
+            button_playmotion.setText(array_string_btnTitle.get(1));
+            button_playmotion_trans.startTransition(0);
+            button_playmotion.setTextColor(getColorStateList(R.color.white));
+        }
+
+        Log.d("sss"+ClickAdapter_Top.isClick0, "sss"+ClickAdapter_Top.isClick1);
+        if (ClickAdapter_Top.isClick0){
+            ClickAdapter_Top.button_function_stateSel(0, ctx);
+        }
+        if (ClickAdapter_Top.isClick1){
+            ClickAdapter_Top.button_function_stateSel(1, ctx);
+        }
+        if (ClickAdapter_Top.isClick2){
+            ClickAdapter_Top.button_function_stateSel(2, ctx);
+        }
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                bottom_rectHeight = bottom_rect.getHeight();
-                rootHeight = root.getHeight();
-                posMinY = root.getHeight()-(container_top_group_height+container_top_marginTop+shadowHeight);
-                container.setY(posMinY);
-                MainActivity.rect_objectFL.setY(0);
-                heightMin = rect_objectFL.getHeight()+shadowHeight;
-                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;
-//                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-0;
-                posMinY_drag = root.getHeight()-(container_top_group_height+container_top_marginTop+shadowHeight)-shadowHeight;
-                params_copy.height = heightMax;
-                rect_objectFL_Copy.setLayoutParams(params_copy);
-                ResetState.defCaseState00();
+                Vars.bottom_rectHeight = bottom_rect.getHeight();
+                Vars.rootHeight = root.getHeight();
+                Vars.posMinY = root.getHeight()-(Vars.container_top_group_height+Vars.container_top_marginTop+Vars.shadowHeight);
 
+                Vars.heightMin = rect_objectFL.getHeight()+Vars.shadowHeight;
+                Vars.heightMax = screenHeight -  Vars.bottom_rectHeight - (Vars.container_top_group_height+Vars.container_top_marginTop+Vars.shadowHeight)-Vars.shadowHeight;
+//                heightMax = screenHeight - bottom_rectHeight - (container_top_group_height+container_top_marginTop+shadowHeight)-0;
+                Vars.posMinY_drag = root.getHeight()-(Vars.container_top_group_height+Vars.container_top_marginTop+Vars.shadowHeight)-Vars.shadowHeight;
+                params_copy.height = Vars.heightMax;
+                rect_objectFL_Copy.setLayoutParams(params_copy);
+
+                if (!Vars.appStart){
+                    Vars.appStart = true;
+                    container.setY(Vars.posMinY);
+                    MainActivity.rect_objectFL.setY(0);
+                    ResetState.defCaseState00();
+                }
+                if (!Vars.container_bool){
+                    DragAdapter.function_containAnim(MainActivity.container, Vars.posMinY, 0, AnimRectObject.interpolator_easeOut);
+                    DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, Vars.heightMin, Vars.heightMax, 0, AnimRectObject.interpolator_easeOut);
+                    MainActivity.container_btn_updown.setRotation(0);
+                } else {
+                    DragAdapter.function_containAnim(MainActivity.container, Vars.posMaxY, 0, AnimRectObject.interpolator_easeOut);
+                    DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, Vars.heightMax, Vars.heightMin, 0, AnimRectObject.interpolator_easeOut);
+                    MainActivity.container_btn_updown.setRotation(-180);
+                }
             }
         }, 1);
 
         container_btn_updown.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!container_bool){
-                        DragAdapter.function_containAnim(MainActivity.container, MainActivity.posMaxY, 400, AnimRectObject.interpolator_easeOut);
-                        DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, MainActivity.heightMax, MainActivity.heightMin, 400, AnimRectObject.interpolator_easeOut);
-                        container_bool = true;
+                if (!Vars.container_bool){
+                        DragAdapter.function_containAnim(MainActivity.container, Vars.posMaxY, 400, AnimRectObject.interpolator_easeOut);
+                        DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, Vars.heightMax, Vars.heightMin, 400, AnimRectObject.interpolator_easeOut);
+                        Vars.container_bool = true;
                         MainActivity.container_btn_updown.setRotation(-180);
                 } else {
-                        DragAdapter.function_containAnim(MainActivity.container, MainActivity.posMinY, 400, AnimRectObject.interpolator_easeOut);
-                        DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, MainActivity.heightMin, MainActivity.heightMax, 400, AnimRectObject.interpolator_easeOut);
-                        container_bool = false;
+                        DragAdapter.function_containAnim(MainActivity.container, Vars.posMinY, 400, AnimRectObject.interpolator_easeOut);
+                        DragAdapter.function_rectObjAnim(MainActivity.rect_objectFL_Copy, Vars.heightMin, Vars.heightMax, 400, AnimRectObject.interpolator_easeOut);
+                        Vars.container_bool = false;
                         MainActivity.container_btn_updown.setRotation(0);
                 }
             }

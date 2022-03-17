@@ -42,8 +42,8 @@ public class DragAdapter implements View.OnTouchListener{
             case MotionEvent.ACTION_DOWN:
                 firstY = curY;
                 move = false;
-                MainActivity.rect_objectFL_Copy.setY( MainActivity.posMaxY );
-                rectCalcHeight = MainActivity.posMaxY;
+                MainActivity.rect_objectFL_Copy.setY( Vars.posMaxY );
+                rectCalcHeight = Vars.posMaxY;
                 break;
             case MotionEvent.ACTION_POINTER_DOWN:
 
@@ -56,12 +56,12 @@ public class DragAdapter implements View.OnTouchListener{
                 move = true;
                 moveY = view.getY() + (Float.parseFloat(curY) - Float.parseFloat(firstY));
                 if (move){
-                    if (MainActivity.container_top_margin < moveY) {
+                    if (Vars.container_top_margin < moveY) {
                         MainActivity.container.setY( moveY );
-                        if ((MainActivity.heightMax-MainActivity.heightMin) > moveY){
-                            rectCalcHeight = Utils_Calc.ModulateCalc(moveY, MainActivity.posMaxY, MainActivity.posMinY_drag, MainActivity.heightMin, MainActivity.heightMax);
+                        if ((Vars.heightMax-Vars.heightMin) > moveY){
+                            rectCalcHeight = Utils_Calc.ModulateCalc(moveY, Vars.posMaxY, Vars.posMinY_drag, Vars.heightMin, Vars.heightMax);
                         }
-                        if ((int) rectCalcHeight > MainActivity.heightMin && (int) rectCalcHeight < MainActivity.heightMax){
+                        if ((int) rectCalcHeight > Vars.heightMin && (int) rectCalcHeight < Vars.heightMax){
                             function_rectObjAnim(MainActivity.rect_objectFL_Copy, (int) rectCalcHeight, (int) rectCalcHeight, 0, interpolator_bounce);
                         }
                     }
@@ -69,23 +69,23 @@ public class DragAdapter implements View.OnTouchListener{
                 break;
             case MotionEvent.ACTION_UP:
                 if (move){
-                    if (((MainActivity.heightMax-MainActivity.heightMin)/2) > moveY){
+                    if (((Vars.heightMax-Vars.heightMin)/2) > moveY){
                         if (MainActivity.rect_objectFL_Copy.getHeight() >= (int) rectCalcHeight){
-                            function_containAnim(MainActivity.container, MainActivity.posMaxY, 400, interpolator_bounce);
-                            if (rectCalcHeight >= MainActivity.posMinY){
+                            function_containAnim(MainActivity.container, Vars.posMaxY, 400, interpolator_bounce);
+                            if (rectCalcHeight >= Vars.posMinY){
                                 function_containAnim(MainActivity.rect_objectFL, 0, 400, interpolator_bounce);
-                                function_rectObjAnim(MainActivity.rect_objectFL_Copy, (int) rectCalcHeight, MainActivity.heightMin, 400, interpolator_bounce);
+                                function_rectObjAnim(MainActivity.rect_objectFL_Copy, (int) rectCalcHeight, Vars.heightMin, 400, interpolator_bounce);
                             }
-                            MainActivity.container_bool = true;
+                            Vars.container_bool = true;
                             MainActivity.container_btn_updown.setRotation(-180);
                         }
                     } else {
-                        function_containAnim(MainActivity.container, MainActivity.posMinY, 400, interpolator_bounce);
-                        if (MainActivity.container.getY() <= MainActivity.posMinY){
+                        function_containAnim(MainActivity.container, Vars.posMinY, 400, interpolator_bounce);
+                        if (MainActivity.container.getY() <= Vars.posMinY){
                             function_containAnim(MainActivity.rect_objectFL, 0, 400, interpolator_bounce);
-                            function_rectObjAnim(MainActivity.rect_objectFL_Copy, (int) rectCalcHeight, MainActivity.heightMax, 400, interpolator_bounce);
+                            function_rectObjAnim(MainActivity.rect_objectFL_Copy, (int) rectCalcHeight, Vars.heightMax, 400, interpolator_bounce);
                         }
-                            MainActivity.container_bool = false;
+                            Vars.container_bool = false;
                             MainActivity.container_btn_updown.setRotation(0);
                     }
                 }

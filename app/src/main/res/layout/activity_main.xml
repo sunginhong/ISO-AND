@@ -157,7 +157,6 @@
                             android:layout_height="47dp"
                             android:background="@drawable/rect_button_playmotion"
                             android:stateListAnimator="@null"
-                            android:text="@string/paly_in_mot"
                             android:textAppearance="@style/paly_in_mot" />
 
                     </LinearLayout>

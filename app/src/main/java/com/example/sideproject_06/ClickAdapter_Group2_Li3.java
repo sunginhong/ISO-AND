@@ -17,7 +17,7 @@ public class ClickAdapter_Group2_Li3 implements View.OnClickListener{
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.group2_li3_btncase0:
-                MainActivity.group2_li3_state = 0;
+                Vars.group2_li3_state = 0;
                 MainActivity.group2_li3_btncase0_text.setTextColor(Color.parseColor("#000000"));
                 MainActivity.group2_li3_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -29,7 +29,7 @@ public class ClickAdapter_Group2_Li3 implements View.OnClickListener{
                 break;
 
             case R.id.group2_li3_btncase1:
-                MainActivity.group2_li3_state = 0.5;
+                Vars.group2_li3_state = 0.5;
                 MainActivity.group2_li3_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase1_text.setTextColor(Color.parseColor("#000000"));
                 MainActivity.group2_li3_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -40,7 +40,7 @@ public class ClickAdapter_Group2_Li3 implements View.OnClickListener{
                 MainActivity.group2_li3_btncase3_radio_trans.resetTransition();
                 break;
             case R.id.group2_li3_btncase2:
-                MainActivity.group2_li3_state = 0.7;
+                Vars.group2_li3_state = 0.7;
                 MainActivity.group2_li3_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase2_text.setTextColor(Color.parseColor("#000000"));
@@ -51,7 +51,7 @@ public class ClickAdapter_Group2_Li3 implements View.OnClickListener{
                 MainActivity.group2_li3_btncase3_radio_trans.resetTransition();
                 break;
             case R.id.group2_li3_btncase3:
-                MainActivity.group2_li3_state = 1.0;
+                Vars.group2_li3_state = 1.0;
                 MainActivity.group2_li3_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group2_li3_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -63,6 +63,6 @@ public class ClickAdapter_Group2_Li3 implements View.OnClickListener{
                 break;
         }
         MainActivity.stateCheck_group2();
-        MainActivity.result_out_opacity.setText(String.valueOf(MainActivity.group2_li3_state));
+        MainActivity.result_out_opacity.setText(String.valueOf(Vars.group2_li3_state));
     }
 }

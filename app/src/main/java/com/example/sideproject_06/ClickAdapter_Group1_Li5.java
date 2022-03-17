@@ -16,7 +16,7 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.group1_li5_btncase0:
-                MainActivity.group1_li5_state = "None";
+                Vars.group1_li5_state = "None";
                 MainActivity.group1_li5_btncase0_text.setTextColor(Color.parseColor("#000000"));
                 MainActivity.group1_li5_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -28,7 +28,7 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
                 break;
 
             case R.id.group1_li5_btncase1:
-                MainActivity.group1_li5_state = "Light";
+                Vars.group1_li5_state = "Light";
                 MainActivity.group1_li5_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase1_text.setTextColor(Color.parseColor("#000000"));
                 MainActivity.group1_li5_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -40,7 +40,7 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
                 break;
 
             case R.id.group1_li5_btncase2:
-                MainActivity.group1_li5_state = "Normal";
+                Vars.group1_li5_state = "Normal";
                 MainActivity.group1_li5_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase2_text.setTextColor(Color.parseColor("#000000"));
@@ -52,7 +52,7 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
                 break;
 
             case R.id.group1_li5_btncase3:
-                MainActivity.group1_li5_state = "Strong";
+                Vars.group1_li5_state = "Strong";
                 MainActivity.group1_li5_btncase0_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase1_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
                 MainActivity.group1_li5_btncase2_text.setTextColor(mContext.getResources().getColor(R.color.textColor_nor));
@@ -65,6 +65,6 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
                 break;
         }
         MainActivity.stateCheck_group1();
-        MainActivity.result_in_haptic.setText(MainActivity.group1_li5_state);
+        MainActivity.result_in_haptic.setText(Vars.group1_li5_state);
     }
 }
