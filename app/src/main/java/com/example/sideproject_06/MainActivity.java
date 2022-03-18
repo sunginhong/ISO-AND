@@ -362,7 +362,6 @@ public class MainActivity extends AppCompatActivity {
         group2_li5_btncase2_text = findViewById(R.id.group2_li5_btncase2_text);
         group2_li5_btncase3_text = findViewById(R.id.group2_li5_btncase3_text);
 
-
         Vars.array_string_easeType = getResources().getStringArray(R.array.string_easeType);
         Vars.group1_li4_state = Vars.array_string_easeType[0];
         Vars.group2_li4_state = Vars.array_string_easeType[0];
@@ -593,7 +592,6 @@ public class MainActivity extends AppCompatActivity {
 
         Vars.posMinY = 0;
         Vars.posMaxY = 0;
-        container.setY(Vars.posMinY);
 
         ViewGroup.LayoutParams params = rect_objectFL.getLayoutParams();
         params_copy = rect_objectFL_Copy.getLayoutParams();
@@ -611,7 +609,6 @@ public class MainActivity extends AppCompatActivity {
             button_playmotion.setTextColor(getColorStateList(R.color.white));
         }
 
-        Log.d("sss"+ClickAdapter_Top.isClick0, "sss"+ClickAdapter_Top.isClick1);
         if (ClickAdapter_Top.isClick0){
             ClickAdapter_Top.button_function_stateSel(0, ctx);
         }
@@ -671,25 +668,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        code_review1.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                str = et_test.getText().toString();// String 형태로 et_test 에 text 을 받아오겠다
-                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
-//                intent.putExtra("str", str);//str에있는 값을 가져 가겠다
-                startActivity(intent);
-                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
-            }
-        });
-
-        code_review2.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
-            }
-        });
+//        code_review1.setOnClickListener(new Button.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
+//                startActivity(intent);
+//                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+//            }
+//        });
+//
+//        code_review2.setOnClickListener(new Button.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
+//                startActivity(intent);
+//                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+//            }
+//        });
     }
 
     public static void stateCheck_group1(){

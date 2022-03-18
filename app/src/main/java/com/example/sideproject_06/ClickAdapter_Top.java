@@ -3,11 +3,13 @@ package com.example.sideproject_06;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.graphics.Interpolator;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 
 public class ClickAdapter_Top implements View.OnClickListener{
 
@@ -30,7 +32,6 @@ public class ClickAdapter_Top implements View.OnClickListener{
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.button_preset_0:
-                Log.d("sss", "sss"+isClick0);
                 if (!isClick0){
                     isClick0 = true;
                     isClick1 = false;
@@ -80,6 +81,12 @@ public class ClickAdapter_Top implements View.OnClickListener{
             isClick1 = false;
             isClick2 = false;
 
+            if (Vars.playMotionState == "In"){
+//                AnimRectObject.view_item0.
+            }
+            if (Vars.playMotionState == "Out"){
+
+            }
             MainActivity.anim_title.setText("Popup Animation");
             AnimRectObject.function_CaseNudge_containStateAnim_reset();
             AnimRectObject.function_CaseAlarm_containStateAnim_reset();
