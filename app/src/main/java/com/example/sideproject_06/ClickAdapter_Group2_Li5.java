@@ -64,7 +64,6 @@ public class ClickAdapter_Group2_Li5 implements View.OnClickListener{
                 MainActivity.group2_li5_btncase3_radio_trans.startTransition(100);
                 break;
         }
-        MainActivity.stateCheck_group2();
         MainActivity.result_out_haptic.setText(Vars.group2_li5_state);
     }
 }

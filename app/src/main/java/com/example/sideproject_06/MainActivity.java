@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Rect;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     public static RelativeLayout root;
 
     public static ViewGroup.LayoutParams params_copy;
+
+    public static FrameLayout rect_main;
+    public static FrameLayout rect_code;
 
     public static List<String> array_string_btnTitle = new ArrayList<String>();
     public static Button button_preset_0;
@@ -246,6 +250,19 @@ public class MainActivity extends AppCompatActivity {
 
     public static View container_btn_updown;
 
+    public static View rect_code_back;
+    public static TextView rect_code_anim_title;
+    public static TextView group1_result_1;
+    public static TextView group1_result_2;
+    public static TextView group1_result_3;
+    public static TextView group1_result_4;
+    public static TextView group1_result_5;
+    public static TextView group2_result_1;
+    public static TextView group2_result_2;
+    public static TextView group2_result_3;
+    public static TextView group2_result_4;
+    public static TextView group2_result_5;
+
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
@@ -256,6 +273,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ctx = this.getApplicationContext();
+
+        rect_main = (FrameLayout) findViewById(R.id.rect_main);
+        rect_code = (FrameLayout) findViewById(R.id.rect_code);
 
         DragAdapter dragAdapter = new DragAdapter(this);
         root = (RelativeLayout)  findViewById(R.id.root);
@@ -598,6 +618,19 @@ public class MainActivity extends AppCompatActivity {
 
         container_btn_updown = (View) findViewById(R.id.container_btn_updown);
 
+        rect_code_back = (View) findViewById(R.id.rect_code_back);
+        rect_code_anim_title = (TextView) findViewById(R.id.rect_code_anim_title);
+        group1_result_1 = (TextView) findViewById(R.id.group1_result_1);
+        group1_result_2 = (TextView) findViewById(R.id.group1_result_2);
+        group1_result_3 = (TextView) findViewById(R.id.group1_result_3);
+        group1_result_4 = (TextView) findViewById(R.id.group1_result_4);
+        group1_result_5 = (TextView) findViewById(R.id.group1_result_5);
+        group2_result_1 = (TextView) findViewById(R.id.group2_result_1);
+        group2_result_2 = (TextView) findViewById(R.id.group2_result_2);
+        group2_result_3 = (TextView) findViewById(R.id.group2_result_3);
+        group2_result_4 = (TextView) findViewById(R.id.group2_result_4);
+        group2_result_5 = (TextView) findViewById(R.id.group2_result_5);
+
         if (Vars.playMotionState == "In"){
             button_playmotion.setText(array_string_btnTitle.get(0));
             button_playmotion_trans.resetTransition();
@@ -632,12 +665,15 @@ public class MainActivity extends AppCompatActivity {
                 Vars.posMinY_drag = root.getHeight()-(Vars.container_top_group_height+Vars.container_top_marginTop+Vars.shadowHeight)-Vars.shadowHeight;
                 params_copy.height = Vars.heightMax;
                 rect_objectFL_Copy.setLayoutParams(params_copy);
+                Vars.screenWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
 
                 if (!Vars.appStart){
                     Vars.appStart = true;
                     container.setY(Vars.posMinY);
                     MainActivity.rect_objectFL.setY(0);
                     ResetState.defCaseState00();
+                    rect_code.setX(Vars.screenWidth);
+//                    Utils_Anim.TransAnim(rect_code, Vars.screenWidth, Vars.screenWidth, 0, 0, 0);
                 }
                 if (!Vars.container_bool){
                     DragAdapter.function_containAnim(MainActivity.container, Vars.posMinY, 0, AnimRectObject.interpolator_easeOut);
@@ -668,31 +704,49 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        code_review1.setOnClickListener(new Button.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
-//                startActivity(intent);
-//                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
-//            }
-//        });
-//
-//        code_review2.setOnClickListener(new Button.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, CodeActivity.class);
-//                startActivity(intent);
-//                overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
-//            }
-//        });
+        code_review1.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!Vars.codePage){
+                    Vars.codePage = true;
+                    rect_code.setX(0);
+                    Utils_Anim.TransAnim(rect_code, Vars.screenWidth, 0, 0, 0, 400);
+                    Utils_Anim.TransAlphaAnim(rect_main, 0, -Vars.screenWidth/2, 0, 0, 1, 0.5f,400);
+                }
+            }
+        });
+
+        code_review2.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!Vars.codePage){
+                    Vars.codePage = true;
+                    rect_code.setX(0);
+                    Utils_Anim.TransAnim(rect_code, Vars.screenWidth, 0, 0, 0, 400);
+                    Utils_Anim.TransAlphaAnim(rect_main, 0, -Vars.screenWidth/2, 0, 0, 1, 0.5f,400);
+                }
+            }
+        });
+
+        rect_code_back.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Vars.codePage){
+                    Vars.codePage = false;
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            rect_code.setX(Vars.screenWidth);
+                        }
+                    }, 400);
+                    Utils_Anim.TransAnim(rect_code, 0, Vars.screenWidth, 0, 0, 400);
+                    Utils_Anim.TransAlphaAnim(rect_main, -Vars.screenWidth/2, 0, 0, 0, 0.5f, 1,400);
+                }
+            }
+        });
     }
 
-    public static void stateCheck_group1(){
-//        Log.d("stateCheck_group1", ""+group1_li0_state+", "+group1_li1_state+", "+group1_li2_state+", "+group1_li3_state+" "+group1_li4_state+", "+group1_li5_state);
-    }
-    public static void stateCheck_group2(){
-//        Log.d("stateCheck_group2", ""+group2_li0_state+", "+group2_li1_state+", "+group2_li2_state+", "+group2_li3_state+", "+group2_li4_state+", "+group2_li5_state);
-    }
     public void getAbsCoord(int resId) {
 
         View v = findViewById(resId);

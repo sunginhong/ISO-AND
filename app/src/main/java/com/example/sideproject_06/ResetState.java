@@ -10,6 +10,7 @@ public class ResetState {
 
     public static void defCaseState00(){
         MainActivity.anim_title.setText("Popup Animation");
+        MainActivity.rect_code_anim_title.setText("Popup Interaction Guide");
         defCaseState();
 
         Vars.defCaseState00_group1_li4_state_def = Vars.array_string_easeType[1];
@@ -41,8 +42,8 @@ public class ResetState {
         Vars.group2_li4_state = Vars.defCaseState00_group1_li4_state_def;
         Vars.group2_li5_state = Vars.defCaseState00_group1_li5_state_def;
 
-        MainActivity.group2_li0_btncase1_text.setTextColor(Color.parseColor("#000000"));
-        MainActivity.group2_li0_btncase1_radio_trans.startTransition(0);
+        MainActivity.group2_li0_btncase0_text.setTextColor(Color.parseColor("#000000"));
+        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
         MainActivity.group2_li1_btncase0_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li1_btncase0_radio_trans.startTransition(0);
         MainActivity.group2_li2_btncase1_text.setTextColor(Color.parseColor("#000000"));
@@ -53,10 +54,14 @@ public class ResetState {
         MainActivity.group2_li4_btncase1_radio_trans.startTransition(0);
         MainActivity.group2_li5_btncase0_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
+
+        MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
+        MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
     }
 
     public static void defCaseState01(){
         MainActivity.anim_title.setText("Nudge Animation");
+        MainActivity.rect_code_anim_title.setText("Nudge Interaction Guide");
         defCaseState();
 
         Vars.defCaseState01_group1_li4_state_def = Vars.array_string_easeType[1];
@@ -101,10 +106,13 @@ public class ResetState {
         MainActivity.group2_li5_btncase0_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
 
+        MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
+        MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
     }
 
     public static void defCaseState02(){
         MainActivity.anim_title.setText("Alarm Animation");
+        MainActivity.rect_code_anim_title.setText("Alarm Interaction Guide");
         defCaseState();
 
         Vars.defCaseState02_group1_li4_state_def = Vars.array_string_easeType[1];
@@ -148,6 +156,9 @@ public class ResetState {
         MainActivity.group2_li4_btncase1_radio_trans.startTransition(0);
         MainActivity.group2_li5_btncase0_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li5_btncase0_radio_trans.startTransition(0);
+
+        MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
+        MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
     }
 
     public static void defCaseState(){

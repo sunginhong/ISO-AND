@@ -64,7 +64,6 @@ public class ClickAdapter_Group1_Li5 implements View.OnClickListener{
 
                 break;
         }
-        MainActivity.stateCheck_group1();
         MainActivity.result_in_haptic.setText(Vars.group1_li5_state);
     }
 }
