@@ -57,6 +57,15 @@ public class ResetState {
 
         MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
         MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
+
+        MainActivity.rect_code_anim_object_case0.setAlpha(1);
+        MainActivity.rect_code_anim_object_case1.setAlpha(0);
+        MainActivity.rect_code_anim_object_case2.setAlpha(0);
+
+        MainActivity.group1_result_2.setText("위치 이동 없음");
+        MainActivity.group2_result_2.setText("위치 이동 없음");
+        MainActivity.group1_result_3.setText("0.5");
+        MainActivity.group2_result_3.setText("0.5");
     }
 
     public static void defCaseState01(){
@@ -93,8 +102,8 @@ public class ResetState {
         Vars.group2_li4_state = Vars.defCaseState01_group1_li4_state_def;
         Vars.group2_li5_state = Vars.defCaseState01_group1_li5_state_def;
 
-        MainActivity.group2_li0_btncase1_text.setTextColor(Color.parseColor("#000000"));
-        MainActivity.group2_li0_btncase1_radio_trans.startTransition(0);
+        MainActivity.group2_li0_btncase0_text.setTextColor(Color.parseColor("#000000"));
+        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
         MainActivity.group2_li1_btncase1_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li1_btncase1_radio_trans.startTransition(0);
         MainActivity.group2_li2_btncase3_text.setTextColor(Color.parseColor("#000000"));
@@ -108,6 +117,15 @@ public class ResetState {
 
         MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
         MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
+
+        MainActivity.rect_code_anim_object_case0.setAlpha(0);
+        MainActivity.rect_code_anim_object_case1.setAlpha(1);
+        MainActivity.rect_code_anim_object_case2.setAlpha(0);
+
+        MainActivity.group1_result_2.setText("가이드 위치 + 30에서 → 가이드 위치까지 이동");
+        MainActivity.group2_result_2.setText("가이드 위치 + 30에서 → 가이드 위치까지 이동");
+        MainActivity.group1_result_3.setText("1");
+        MainActivity.group2_result_3.setText("1");
     }
 
     public static void defCaseState02(){
@@ -144,8 +162,8 @@ public class ResetState {
         Vars.group2_li4_state = Vars.defCaseState02_group1_li4_state_def;
         Vars.group2_li5_state = Vars.defCaseState02_group1_li5_state_def;
 
-        MainActivity.group2_li0_btncase1_text.setTextColor(Color.parseColor("#000000"));
-        MainActivity.group2_li0_btncase1_radio_trans.startTransition(0);
+        MainActivity.group2_li0_btncase0_text.setTextColor(Color.parseColor("#000000"));
+        MainActivity.group2_li0_btncase0_radio_trans.startTransition(0);
         MainActivity.group2_li1_btncase1_text.setTextColor(Color.parseColor("#000000"));
         MainActivity.group2_li1_btncase1_radio_trans.startTransition(0);
         MainActivity.group2_li2_btncase3_text.setTextColor(Color.parseColor("#000000"));
@@ -159,6 +177,15 @@ public class ResetState {
 
         MainActivity.group1_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_in_ease.getText());
         MainActivity.group2_result_5.setText("ease" + Vars.array_string_easeType[1] + " - " + MainActivity.result_out_ease.getText());
+
+        MainActivity.rect_code_anim_object_case0.setAlpha(0);
+        MainActivity.rect_code_anim_object_case1.setAlpha(0);
+        MainActivity.rect_code_anim_object_case2.setAlpha(1);
+
+        MainActivity.group1_result_2.setText("가이드 위치 + 30에서 → 가이드 위치까지 이동");
+        MainActivity.group2_result_2.setText("가이드 위치 + 30에서 → 가이드 위치까지 이동");
+        MainActivity.group1_result_3.setText("1");
+        MainActivity.group2_result_3.setText("1");
     }
 
     public static void defCaseState(){
@@ -268,6 +295,15 @@ public class ResetState {
         MainActivity.group2_li5_btncase2_radio_trans.resetTransition();
         MainActivity.group2_li5_btncase3_text.setTextColor(Color.parseColor("#BDC0BD"));
         MainActivity.group2_li5_btncase3_radio_trans.resetTransition();
+
+        MainActivity.rect_code_anim_object_case0.setAlpha(1);
+        MainActivity.rect_code_anim_object_case1.setAlpha(0);
+        MainActivity.rect_code_anim_object_case2.setAlpha(0);
+
+        MainActivity.group1_result_2.setText("위치 이동 없음");
+        MainActivity.group2_result_2.setText("위치 이동 없음");
+        MainActivity.group1_result_3.setText("0.5");
+        MainActivity.group2_result_3.setText("0.5");
     }
 
 }

@@ -5,6 +5,7 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.5640625" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2965" />
+        <entry key="app/src/main/res/drawable/back_arrow.xml" value="0.3285" />
         <entry key="app/src/main/res/drawable/borderline.xml" value="0.2655" />
         <entry key="app/src/main/res/drawable/button_border.xml" value="0.2585" />
         <entry key="app/src/main/res/drawable/button_playmotion.xml" value="0.394" />
@@ -29,7 +30,7 @@
         <entry key="app/src/main/res/drawable/select_radio_male.xml" value="0.3265" />
         <entry key="app/src/main/res/drawable/shadow_test.xml" value="0.3265" />
         <entry key="app/src/main/res/layout/activity_code.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.41087962962962965" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
         <entry key="app/src/main/res/layout/person_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/radiogroup_sample.xml" value="0.20697463768115942" />
         <entry key="app/src/main/res/layout/radiogroup_sample_main.xml" value="0.20697463768115942" />

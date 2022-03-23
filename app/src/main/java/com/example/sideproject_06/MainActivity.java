@@ -252,6 +252,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static View rect_code_back;
     public static TextView rect_code_anim_title;
+    public static View rect_code_anim_object_case0;
+    public static View rect_code_anim_object_case1;
+    public static View rect_code_anim_object_case2;
     public static TextView group1_result_1;
     public static TextView group1_result_2;
     public static TextView group1_result_3;
@@ -620,6 +623,9 @@ public class MainActivity extends AppCompatActivity {
 
         rect_code_back = (View) findViewById(R.id.rect_code_back);
         rect_code_anim_title = (TextView) findViewById(R.id.rect_code_anim_title);
+        rect_code_anim_object_case0 = (View) findViewById(R.id.rect_code_anim_object_case0);
+        rect_code_anim_object_case1 = (View) findViewById(R.id.rect_code_anim_object_case1);
+        rect_code_anim_object_case2 = (View) findViewById(R.id.rect_code_anim_object_case2);
         group1_result_1 = (TextView) findViewById(R.id.group1_result_1);
         group1_result_2 = (TextView) findViewById(R.id.group1_result_2);
         group1_result_3 = (TextView) findViewById(R.id.group1_result_3);
@@ -666,6 +672,7 @@ public class MainActivity extends AppCompatActivity {
                 params_copy.height = Vars.heightMax;
                 rect_objectFL_Copy.setLayoutParams(params_copy);
                 Vars.screenWidth = Resources.getSystem().getDisplayMetrics().widthPixels;
+                rect_code.setAlpha(1);
 
                 if (!Vars.appStart){
                     Vars.appStart = true;
@@ -745,6 +752,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (Vars.codePage){
+            Vars.codePage = false;
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    rect_code.setX(Vars.screenWidth);
+                }
+            }, 400);
+            Utils_Anim.TransAnim(rect_code, 0, Vars.screenWidth, 0, 0, 400);
+            Utils_Anim.TransAlphaAnim(rect_main, -Vars.screenWidth/2, 0, 0, 0, 0.5f, 1,400);
+        }
     }
 
     public void getAbsCoord(int resId) {

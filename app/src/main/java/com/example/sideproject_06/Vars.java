@@ -39,7 +39,7 @@ public class Vars {
     public static String defCaseState01_group1_li4_state_def = "";
     public static String defCaseState01_group1_li5_state_def = "None";
 
-    public static int defCaseState02_group1_li0_state_def = 300;
+    public static int defCaseState02_group1_li0_state_def = 200;
     public static int defCaseState02_group1_li1_state_def = Utils_Calc.dpToPx(bottomPosY);
     public static double defCaseState02_group1_li2_state_def = 1;
     public static double defCaseState02_group1_li3_state_def = 0.0;
