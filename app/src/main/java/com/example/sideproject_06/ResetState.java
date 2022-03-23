@@ -304,6 +304,7 @@ public class ResetState {
         MainActivity.group2_result_2.setText("위치 이동 없음");
         MainActivity.group1_result_3.setText("0.5");
         MainActivity.group2_result_3.setText("0.5");
+
     }
 
 }
